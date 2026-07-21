@@ -1,0 +1,4250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCW - Save Little Lives | Secure Healthcare Crowdfunding Portal</title>
+  <meta name="description" content="CCW Save Little Lives is a verified healthcare crowdfunding platform connecting hospitals, donors, and government health authorities to fund life-saving treatment for children." />
+  <style>
+/* ============================================================
+   CCW - Save Little Lives
+   Global Stylesheet - Enhanced Professional Edition
+   ============================================================ */
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ccw-red: #c41e3a;
+  --ccw-red-dark: #9c1530;
+  --ccw-red-deep: #7a1026;
+  --ccw-red-light: #e63b5a;
+  --ccw-red-tint: #fde8ec;
+  --ccw-red-tint-2: #f9d4dc;
+  --ccw-gray-900: #14181f;
+  --ccw-gray-800: #1f2937;
+  --ccw-gray-700: #374151;
+  --ccw-gray-600: #4b5563;
+  --ccw-gray-500: #6b7280;
+  --ccw-gray-400: #9ca3af;
+  --ccw-gray-300: #d1d5db;
+  --ccw-gray-200: #e5e7eb;
+  --ccw-gray-100: #f3f4f6;
+  --ccw-gray-50: #f8f9fb;
+  --ccw-white: #ffffff;
+  --ccw-green: #16a34a;
+  --ccw-green-dark: #15803d;
+  --ccw-green-light: #dcfce7;
+  --ccw-amber: #d97706;
+  --ccw-amber-light: #fef3c7;
+  --ccw-blue: #2563eb;
+  --ccw-blue-light: #dbeafe;
+  --ccw-purple: #7c3aed;
+  --ccw-purple-light: #ede9fe;
+  --ccw-teal: #0d9488;
+  --ccw-teal-light: #ccfbf1;
+  --ccw-ink: #0f172a;
+  --ccw-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --ccw-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --ccw-shadow: 0 2px 8px rgba(15, 23, 42, 0.07), 0 1px 3px rgba(15, 23, 42, 0.04);
+  --ccw-shadow-md: 0 6px 20px rgba(15, 23, 42, 0.09), 0 2px 6px rgba(15, 23, 42, 0.05);
+  --ccw-shadow-lg: 0 14px 40px rgba(15, 23, 42, 0.12), 0 6px 14px rgba(15, 23, 42, 0.06);
+  --ccw-shadow-red: 0 8px 24px rgba(196, 30, 58, 0.28);
+  --ccw-radius: 12px;
+  --ccw-radius-sm: 8px;
+  --ccw-radius-lg: 18px;
+  --ccw-radius-xl: 24px;
+  --sidebar-width: 264px;
+  --header-height: 68px;
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ccw-gray-800);
+  background: var(--ccw-gray-50);
+  line-height: 1.6;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--ccw-red);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--ccw-red-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--ccw-gray-900);
+  line-height: 1.25;
+}
+
+/* ---------- Decorative gradient mesh (for heroes) ---------- */
+.mesh-bg {
+  position: relative;
+  overflow: hidden;
+}
+.mesh-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.18) 0%, transparent 38%),
+    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.12) 0%, transparent 42%),
+    radial-gradient(circle at 75% 88%, rgba(255, 255, 255, 0.10) 0%, transparent 40%);
+  pointer-events: none;
+}
+.mesh-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle at 50% 40%, black, transparent 75%);
+  mask-image: radial-gradient(circle at 50% 40%, black, transparent 75%);
+}
+
+/* ---------- Top Navigation Bar ---------- */
+.topbar {
+  background: var(--ccw-white);
+  border-bottom: 1px solid var(--ccw-gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--ccw-shadow-sm);
+}
+
+.topbar-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  height: var(--header-height);
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(145deg, var(--ccw-red-light), var(--ccw-red-dark));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ccw-white);
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(196, 30, 58, 0.32);
+}
+
+.brand-logo svg {
+  width: 27px;
+  height: 27px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text .brand-name {
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--ccw-red);
+  letter-spacing: 0.5px;
+}
+
+.brand-text .brand-tag {
+  font-size: 12px;
+  color: var(--ccw-gray-500);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav-links a {
+  display: block;
+  padding: 10px 17px;
+  color: var(--ccw-gray-700);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: var(--ccw-radius-sm);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--ccw-red);
+  background: var(--ccw-red-tint);
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 17px;
+  right: 17px;
+  bottom: 4px;
+  height: 2px;
+  background: var(--ccw-red);
+  border-radius: 2px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: var(--ccw-radius-sm);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+
+.btn-primary {
+  background: linear-gradient(145deg, var(--ccw-red), var(--ccw-red-dark));
+  color: var(--ccw-white);
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.30);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(145deg, var(--ccw-red-light), var(--ccw-red));
+  color: var(--ccw-white);
+  box-shadow: 0 6px 18px rgba(196, 30, 58, 0.38);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: var(--ccw-white);
+  color: var(--ccw-red);
+  border: 1.5px solid var(--ccw-red);
+}
+
+.btn-outline:hover {
+  background: var(--ccw-red-tint);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: var(--ccw-white);
+  color: var(--ccw-gray-700);
+  border: 1px solid var(--ccw-gray-300);
+}
+
+.btn-ghost:hover {
+  background: var(--ccw-gray-100);
+  color: var(--ccw-gray-900);
+  border-color: var(--ccw-gray-400);
+}
+
+.btn-dark {
+  background: var(--ccw-ink);
+  color: var(--ccw-white);
+}
+
+.btn-dark:hover {
+  background: #1e293b;
+  color: var(--ccw-white);
+  transform: translateY(-1px);
+}
+
+.btn-block { width: 100%; }
+.btn-lg { padding: 15px 30px; font-size: 15.5px; }
+.btn-sm { padding: 7px 14px; font-size: 13px; }
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--ccw-white);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius);
+  box-shadow: var(--ccw-shadow-sm);
+}
+
+.card-pad { padding: 26px; }
+
+.card-header {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--ccw-gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.card-title .ct-mark {
+  width: 4px;
+  height: 18px;
+  border-radius: 3px;
+  background: var(--ccw-red);
+  display: inline-block;
+}
+
+/* ---------- Forms ---------- */
+.form-group { margin-bottom: 18px; }
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ccw-gray-700);
+  margin-bottom: 7px;
+}
+
+.form-label .req { color: var(--ccw-red); }
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--ccw-gray-900);
+  background: var(--ccw-white);
+  border: 1.5px solid var(--ccw-gray-300);
+  border-radius: var(--ccw-radius-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--ccw-red);
+  box-shadow: 0 0 0 4px rgba(196, 30, 58, 0.12);
+  background: var(--ccw-white);
+}
+
+.form-control::placeholder { color: var(--ccw-gray-400); }
+
+textarea.form-control { resize: vertical; min-height: 90px; }
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 40px;
+}
+
+.input-group { position: relative; }
+
+.input-group .toggle-pw {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ccw-gray-400);
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.input-group .toggle-pw:hover { color: var(--ccw-red); }
+
+.input-group .input-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ccw-gray-400);
+  pointer-events: none;
+}
+.input-group .input-icon svg { width: 18px; height: 18px; }
+
+.input-group .form-control.has-icon { padding-left: 42px; }
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ccw-gray-700);
+  cursor: pointer;
+}
+
+.checkbox-row input { width: 16px; height: 16px; accent-color: var(--ccw-red); }
+
+/* File upload */
+.upload-area {
+  border: 2px dashed var(--ccw-gray-300);
+  border-radius: var(--ccw-radius-sm);
+  padding: 30px;
+  text-align: center;
+  color: var(--ccw-gray-500);
+  background: var(--ccw-gray-50);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upload-area:hover {
+  border-color: var(--ccw-red);
+  background: var(--ccw-red-tint);
+  color: var(--ccw-red);
+}
+
+.upload-area svg {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 10px;
+  color: var(--ccw-gray-400);
+}
+
+.upload-area:hover svg { color: var(--ccw-red); }
+
+.upload-area .up-hint {
+  font-size: 12px;
+  color: var(--ccw-gray-400);
+  margin-top: 5px;
+}
+
+/* ---------- Tables ---------- */
+.table-wrap { overflow-x: auto; }
+
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+table.data-table thead th {
+  text-align: left;
+  padding: 13px 18px;
+  background: var(--ccw-gray-50);
+  color: var(--ccw-gray-600);
+  font-weight: 700;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--ccw-gray-200);
+}
+
+table.data-table tbody td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--ccw-gray-100);
+  color: var(--ccw-gray-700);
+}
+
+table.data-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+table.data-table tbody tr:hover { background: var(--ccw-red-tint); }
+
+table.data-table tbody tr:last-child td { border-bottom: none; }
+
+.cell-strong { font-weight: 700; color: var(--ccw-gray-900); }
+.cell-amount { font-weight: 800; color: var(--ccw-red); }
+
+/* ---------- Badges / Pills ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.badge-pending { background: var(--ccw-amber-light); color: var(--ccw-amber); }
+.badge-approved { background: var(--ccw-green-light); color: var(--ccw-green-dark); }
+.badge-rejected { background: var(--ccw-red-tint); color: var(--ccw-red); }
+.badge-active { background: var(--ccw-blue-light); color: var(--ccw-blue); }
+.badge-neutral { background: var(--ccw-gray-100); color: var(--ccw-gray-600); }
+
+.badge.no-dot::before { display: none; }
+
+/* ---------- Stat Cards ---------- */
+.stat-grid { display: grid; gap: 18px; }
+
+.stat-card {
+  background: var(--ccw-white);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius);
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: var(--ccw-shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent, var(--ccw-red));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ccw-shadow-md);
+  border-color: var(--ccw-gray-300);
+}
+
+.stat-card:hover::before { opacity: 1; }
+
+.stat-card.accent-red { --accent: var(--ccw-red); }
+.stat-card.accent-green { --accent: var(--ccw-green); }
+.stat-card.accent-amber { --accent: var(--ccw-amber); }
+.stat-card.accent-blue { --accent: var(--ccw-blue); }
+.stat-card.accent-purple { --accent: var(--ccw-purple); }
+.stat-card.accent-teal { --accent: var(--ccw-teal); }
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon svg { width: 25px; height: 25px; }
+
+.stat-icon.red { background: var(--ccw-red-tint); color: var(--ccw-red); }
+.stat-icon.green { background: var(--ccw-green-light); color: var(--ccw-green-dark); }
+.stat-icon.amber { background: var(--ccw-amber-light); color: var(--ccw-amber); }
+.stat-icon.blue { background: var(--ccw-blue-light); color: var(--ccw-blue); }
+.stat-icon.gray { background: var(--ccw-gray-100); color: var(--ccw-gray-500); }
+.stat-icon.purple { background: var(--ccw-purple-light); color: var(--ccw-purple); }
+.stat-icon.teal { background: var(--ccw-teal-light); color: var(--ccw-teal); }
+
+.stat-body { min-width: 0; }
+
+.stat-body .stat-value {
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+}
+
+.stat-body .stat-label {
+  font-size: 12.5px;
+  color: var(--ccw-gray-500);
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.stat-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 7px;
+  padding: 2px 7px;
+  border-radius: 20px;
+}
+.stat-trend svg { width: 11px; height: 11px; }
+.stat-trend.up { background: var(--ccw-green-light); color: var(--ccw-green-dark); }
+.stat-trend.down { background: var(--ccw-red-tint); color: var(--ccw-red); }
+.stat-trend.flat { background: var(--ccw-gray-100); color: var(--ccw-gray-500); }
+
+/* ---------- Progress Bars ---------- */
+.progress {
+  height: 9px;
+  background: var(--ccw-gray-200);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ccw-red-light), var(--ccw-red));
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.progress-bar.green { background: linear-gradient(90deg, #4ade80, var(--ccw-green)); }
+.progress-bar.amber { background: linear-gradient(90deg, #fbbf24, var(--ccw-amber)); }
+
+/* ---------- Dashboard Layout ---------- */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: var(--ccw-gray-50);
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--ccw-white);
+  border-right: 1px solid var(--ccw-gray-200);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 900;
+  overflow-y: auto;
+  box-shadow: 2px 0 14px rgba(15, 23, 42, 0.04);
+}
+
+.sidebar-brand {
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--ccw-gray-200);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.sidebar-brand .brand-logo { width: 40px; height: 40px; border-radius: 11px; }
+.sidebar-brand .brand-logo svg { width: 23px; height: 23px; }
+.sidebar-brand .brand-name { font-size: 19px; }
+.sidebar-brand .brand-tag { font-size: 10.5px; }
+
+.sidebar-nav {
+  padding: 14px 12px;
+  flex: 1;
+  list-style: none;
+}
+
+.sidebar-nav .nav-section-title {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--ccw-gray-400);
+  font-weight: 800;
+  padding: 16px 12px 7px;
+}
+
+.sidebar-nav li a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 11px 13px;
+  border-radius: var(--ccw-radius-sm);
+  color: var(--ccw-gray-600);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  margin-bottom: 2px;
+}
+
+.sidebar-nav li a svg {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  color: var(--ccw-gray-400);
+  transition: color 0.15s ease;
+}
+
+.sidebar-nav li a:hover {
+  background: var(--ccw-gray-100);
+  color: var(--ccw-gray-900);
+}
+
+.sidebar-nav li a:hover svg { color: var(--ccw-gray-700); }
+
+.sidebar-nav li a.active {
+  background: linear-gradient(135deg, var(--ccw-red), var(--ccw-red-dark));
+  color: var(--ccw-white);
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.28);
+}
+
+.sidebar-nav li a.active svg { color: var(--ccw-white); }
+
+.sidebar-nav li a .nav-badge {
+  margin-left: auto;
+  background: var(--ccw-red);
+  color: var(--ccw-white);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 20px;
+}
+.sidebar-nav li a.active .nav-badge { background: rgba(255,255,255,0.25); }
+
+.sidebar-user {
+  padding: 16px;
+  border-top: 1px solid var(--ccw-gray-200);
+}
+
+.sidebar-user-card {
+  background: var(--ccw-gray-50);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius-sm);
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.sidebar-user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: linear-gradient(145deg, var(--ccw-red-light), var(--ccw-red-dark));
+  color: var(--ccw-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.sidebar-user-info .su-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  line-height: 1.2;
+}
+
+.sidebar-user-info .su-role {
+  font-size: 11px;
+  color: var(--ccw-gray-500);
+  margin-top: 1px;
+}
+
+.main-area {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.main-header {
+  background: var(--ccw-white);
+  border-bottom: 1px solid var(--ccw-gray-200);
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 800;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.03);
+}
+
+.main-header .mh-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  letter-spacing: -0.2px;
+}
+
+.main-header .mh-subtitle {
+  font-size: 12.5px;
+  color: var(--ccw-gray-500);
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.main-header .mh-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  border: 1px solid var(--ccw-gray-200);
+  background: var(--ccw-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ccw-gray-500);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: var(--ccw-red-tint);
+  color: var(--ccw-red);
+  border-color: var(--ccw-red-tint-2);
+}
+
+.icon-btn svg { width: 19px; height: 19px; }
+
+.icon-btn .notif-dot {
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  width: 8px;
+  height: 8px;
+  background: var(--ccw-red);
+  border-radius: 50%;
+  border: 2px solid var(--ccw-white);
+}
+
+.main-content { padding: 30px; flex: 1; }
+
+/* ---------- Page welcome banner (dashboard) ---------- */
+.welcome-banner {
+  background: linear-gradient(135deg, var(--ccw-red) 0%, var(--ccw-red-deep) 100%);
+  border-radius: var(--ccw-radius-lg);
+  padding: 28px 30px;
+  color: var(--ccw-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--ccw-shadow-red);
+  margin-bottom: 24px;
+}
+
+.welcome-banner::before {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.welcome-banner::after {
+  content: "";
+  position: absolute;
+  right: 60px;
+  bottom: -80px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.welcome-banner .wb-content { position: relative; z-index: 2; max-width: 560px; }
+
+.welcome-banner .wb-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.welcome-banner .wb-sub {
+  font-size: 14px;
+  opacity: 0.92;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+.welcome-banner .wb-action { position: relative; z-index: 2; }
+
+.welcome-banner .wb-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 5px 11px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.welcome-banner .wb-eyebrow svg { width: 13px; height: 13px; }
+
+/* ---------- Grid Helpers ---------- */
+.grid { display: grid; gap: 20px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-6 { grid-template-columns: repeat(6, 1fr); }
+.grid-7 { grid-template-columns: repeat(7, 1fr); }
+.cols-7-5 { display: grid; grid-template-columns: 7fr 5fr; gap: 20px; }
+.cols-3-2 { display: grid; grid-template-columns: 3fr 2fr; gap: 20px; }
+.cols-2-1 { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+
+.mt-0 { margin-top: 0; } .mt-8 { margin-top: 8px; } .mt-16 { margin-top: 16px; }
+.mt-20 { margin-top: 20px; } .mt-24 { margin-top: 24px; }
+.mb-0 { margin-bottom: 0; } .mb-8 { margin-bottom: 8px; } .mb-16 { margin-bottom: 16px; }
+.mb-20 { margin-bottom: 20px; } .mb-24 { margin-bottom: 24px; }
+
+.section-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  margin-bottom: 4px;
+  letter-spacing: -0.2px;
+}
+
+.section-sub { font-size: 13px; color: var(--ccw-gray-500); }
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ccw-red);
+  transition: gap 0.2s ease;
+}
+
+.link-arrow:hover { gap: 8px; }
+.link-arrow svg { width: 14px; height: 14px; }
+
+/* ---------- Login Page ---------- */
+.login-split {
+  display: grid;
+  grid-template-columns: 1.05fr 1.4fr;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.login-aside {
+  background: linear-gradient(160deg, var(--ccw-red) 0%, var(--ccw-red-deep) 70%, #5e0c1e 100%);
+  color: var(--ccw-white);
+  padding: 56px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-aside::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+}
+.login-aside::after {
+  content: "";
+  position: absolute;
+  bottom: -160px;
+  left: -100px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.login-aside .la-inner { position: relative; z-index: 2; }
+
+.login-aside .la-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 6px 13px;
+  border-radius: 20px;
+  margin-bottom: 26px;
+}
+
+.login-aside .la-eyebrow svg { width: 14px; height: 14px; }
+
+.login-aside .la-mark {
+  width: 84px;
+  height: 84px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  backdrop-filter: blur(4px);
+}
+
+.login-aside .la-mark svg { width: 46px; height: 46px; color: var(--ccw-white); }
+
+.login-aside h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--ccw-white);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.login-aside .la-lead {
+  font-size: 15.5px;
+  opacity: 0.92;
+  margin-top: 16px;
+  line-height: 1.7;
+  max-width: 440px;
+}
+
+.login-aside .la-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 34px;
+  position: relative;
+  z-index: 2;
+}
+
+.login-aside .la-stat .las-value {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--ccw-white);
+  line-height: 1;
+}
+
+.login-aside .la-stat .las-label {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.login-aside .la-footer {
+  position: relative;
+  z-index: 2;
+  font-size: 12.5px;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.login-aside .la-footer svg { width: 17px; height: 17px; }
+
+.login-main {
+  padding: 48px 56px;
+  background: var(--ccw-gray-50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-main .lm-head { margin-bottom: 28px; }
+
+.login-main .lm-head h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  letter-spacing: -0.3px;
+}
+
+.login-main .lm-head p {
+  font-size: 14px;
+  color: var(--ccw-gray-500);
+  margin-top: 6px;
+}
+
+.login-portals {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.portal-card {
+  background: var(--ccw-white);
+  border: 1.5px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius-lg);
+  box-shadow: var(--ccw-shadow-sm);
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  transition: all 0.25s ease;
+}
+
+.portal-card:hover {
+  border-color: var(--ccw-red-tint-2);
+  box-shadow: var(--ccw-shadow-md);
+  transform: translateY(-2px);
+}
+
+.portal-rail {
+  width: 84px;
+  flex-shrink: 0;
+  background: linear-gradient(160deg, var(--ccw-red-tint), var(--ccw-red-tint-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--ccw-gray-200);
+}
+
+.portal-rail .portal-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(145deg, var(--ccw-red), var(--ccw-red-dark));
+  color: var(--ccw-white);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(196, 30, 58, 0.30);
+}
+
+.portal-rail .portal-icon svg { width: 27px; height: 27px; }
+
+.portal-body {
+  padding: 20px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portal-body .pb-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.portal-body .pb-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+}
+
+.portal-body .pb-desc {
+  font-size: 13px;
+  color: var(--ccw-gray-500);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.portal-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.portal-form .form-group { margin-bottom: 0; }
+.portal-form .form-label { font-size: 11.5px; margin-bottom: 5px; }
+
+.portal-form .pb-extras {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.portal-card.compact .portal-form { grid-template-columns: 1fr 1fr; }
+.portal-card.compact .portal-body { padding: 18px 22px; }
+
+.security-strip {
+  background: var(--ccw-white);
+  border-top: 1px solid var(--ccw-gray-200);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  color: var(--ccw-gray-600);
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.security-strip svg { width: 20px; height: 20px; color: var(--ccw-green); }
+
+.security-strip .sec-pills {
+  display: flex;
+  gap: 8px;
+  margin-left: 18px;
+}
+
+.security-strip .sec-pill {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ccw-gray-600);
+  background: var(--ccw-gray-100);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ---------- Multi-step form ---------- */
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  background: var(--ccw-white);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius);
+  padding: 18px 22px;
+  box-shadow: var(--ccw-shadow-sm);
+}
+
+.step { display: flex; align-items: center; gap: 11px; }
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--ccw-gray-100);
+  color: var(--ccw-gray-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+  flex-shrink: 0;
+  border: 2px solid var(--ccw-gray-200);
+  transition: all 0.2s ease;
+}
+
+.step.active .step-circle {
+  background: linear-gradient(145deg, var(--ccw-red), var(--ccw-red-dark));
+  color: var(--ccw-white);
+  border-color: var(--ccw-red);
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.30);
+}
+
+.step.done .step-circle {
+  background: var(--ccw-green);
+  color: var(--ccw-white);
+  border-color: var(--ccw-green);
+}
+
+.step-label { font-size: 13.5px; font-weight: 700; color: var(--ccw-gray-500); }
+.step.active .step-label { color: var(--ccw-gray-900); }
+.step.done .step-label { color: var(--ccw-gray-700); }
+
+.step-line { flex: 1; height: 2px; background: var(--ccw-gray-200); min-width: 28px; border-radius: 2px; }
+.step-line.done { background: var(--ccw-green); }
+
+/* ---------- Info box ---------- */
+.info-box {
+  background: var(--ccw-red-tint);
+  border: 1px solid var(--ccw-red-tint-2);
+  border-left: 4px solid var(--ccw-red);
+  border-radius: var(--ccw-radius-sm);
+  padding: 15px 17px;
+  font-size: 13px;
+  color: var(--ccw-gray-700);
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+}
+
+.info-box svg { width: 20px; height: 20px; color: var(--ccw-red); flex-shrink: 0; margin-top: 1px; }
+.info-box strong { color: var(--ccw-red-dark); }
+
+/* ---------- Case card (donor) ---------- */
+.case-card {
+  background: var(--ccw-white);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius);
+  padding: 20px;
+  box-shadow: var(--ccw-shadow-sm);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ccw-shadow-md);
+  border-color: var(--ccw-gray-300);
+}
+
+.case-card .cc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  gap: 10px;
+}
+
+.case-card .cc-disease {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+}
+
+.case-card .cc-meta {
+  font-size: 12.5px;
+  color: var(--ccw-gray-500);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.case-card .cc-meta svg { width: 13px; height: 13px; }
+
+.case-card .cc-amounts {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+
+.case-card .cc-amounts .raised { font-weight: 800; color: var(--ccw-red); }
+.case-card .cc-amounts .goal { color: var(--ccw-gray-500); font-weight: 600; }
+
+.case-card .cc-pct {
+  font-size: 12px;
+  color: var(--ccw-gray-600);
+  margin-top: 9px;
+  text-align: right;
+  font-weight: 700;
+}
+
+/* ---------- Quick action tile ---------- */
+.qa-tile {
+  background: var(--ccw-white);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--ccw-shadow-sm);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.qa-tile:hover {
+  border-color: var(--ccw-red-tint-2);
+  transform: translateY(-2px);
+  box-shadow: var(--ccw-shadow-md);
+}
+
+.qa-tile .qa-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--ccw-red-tint);
+  color: var(--ccw-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.qa-tile:hover .qa-icon {
+  background: linear-gradient(145deg, var(--ccw-red), var(--ccw-red-dark));
+  color: var(--ccw-white);
+}
+
+.qa-tile .qa-icon svg { width: 22px; height: 22px; }
+
+.qa-tile .qa-text .qa-title { font-size: 14px; font-weight: 800; color: var(--ccw-gray-900); }
+.qa-tile .qa-text .qa-sub { font-size: 12px; color: var(--ccw-gray-500); margin-top: 1px; }
+
+/* ---------- Activity list ---------- */
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--ccw-gray-100);
+}
+
+.activity-item:last-child { border-bottom: none; }
+
+.activity-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activity-dot svg { width: 18px; height: 18px; }
+
+.activity-dot.amber { background: var(--ccw-amber-light); color: var(--ccw-amber); }
+.activity-dot.green { background: var(--ccw-green-light); color: var(--ccw-green-dark); }
+.activity-dot.blue { background: var(--ccw-blue-light); color: var(--ccw-blue); }
+.activity-dot.red { background: var(--ccw-red-tint); color: var(--ccw-red); }
+
+.activity-text { font-size: 13px; color: var(--ccw-gray-700); line-height: 1.5; }
+.activity-text strong { color: var(--ccw-gray-900); }
+
+.activity-time {
+  font-size: 11.5px;
+  color: var(--ccw-gray-400);
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+/* ---------- Insight / mini chart bars ---------- */
+.mini-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+  height: 70px;
+  padding-top: 6px;
+}
+
+.mini-chart .mc-bar {
+  flex: 1;
+  background: var(--ccw-gray-200);
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+.mini-chart .mc-bar.fill {
+  background: linear-gradient(180deg, var(--ccw-red-light), var(--ccw-red));
+}
+
+.mini-chart .mc-labels {
+  display: flex;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.mini-chart .mc-labels span {
+  flex: 1;
+  text-align: center;
+  font-size: 10.5px;
+  color: var(--ccw-gray-400);
+  font-weight: 600;
+}
+
+.donut {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  background: conic-gradient(
+    var(--ccw-green) 0% 71%,
+    var(--ccw-amber) 71% 86%,
+    var(--ccw-red) 86% 100%
+  );
+  position: relative;
+}
+
+.donut::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  background: var(--ccw-white);
+  border-radius: 50%;
+}
+
+.donut .donut-val { position: relative; z-index: 2; font-size: 26px; font-weight: 800; color: var(--ccw-gray-900); }
+.donut .donut-cap { position: relative; z-index: 2; font-size: 11px; color: var(--ccw-gray-500); font-weight: 600; }
+
+.legend { display: flex; flex-direction: column; gap: 10px; }
+.legend .lg-row { display: flex; align-items: center; gap: 9px; font-size: 13px; color: var(--ccw-gray-700); }
+.legend .lg-dot { width: 11px; height: 11px; border-radius: 4px; }
+.legend .lg-dot.green { background: var(--ccw-green); }
+.legend .lg-dot.amber { background: var(--ccw-amber); }
+.legend .lg-dot.red { background: var(--ccw-red); }
+.legend .lg-val { margin-left: auto; font-weight: 800; color: var(--ccw-gray-900); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--ccw-ink);
+  color: var(--ccw-gray-300);
+  padding: 48px 24px 22px;
+  margin-top: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ccw-red), var(--ccw-red-light), var(--ccw-red));
+}
+
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 36px;
+}
+
+.footer-col h4 {
+  color: var(--ccw-white);
+  font-size: 13.5px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.footer-col p {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: #9aa3b2;
+}
+
+.footer-col ul { list-style: none; }
+
+.footer-col ul li { margin-bottom: 10px; }
+
+.footer-col ul a {
+  color: #9aa3b2;
+  font-size: 13.5px;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-col ul a:hover {
+  color: var(--ccw-white);
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  max-width: 1240px;
+  margin: 30px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: #6b7280;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 16px;
+}
+
+.footer-brand .brand-logo { width: 42px; height: 42px; box-shadow: 0 4px 12px rgba(196,30,58,0.3); }
+
+/* ---------- Generic page hero ---------- */
+.page-hero {
+  background: linear-gradient(135deg, var(--ccw-red) 0%, var(--ccw-red-deep) 60%, #5e0c1e 100%);
+  color: var(--ccw-white);
+  padding: 68px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero .ph-inner { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+
+.page-hero .ph-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 7px 15px;
+  border-radius: 20px;
+  margin-bottom: 22px;
+}
+
+.page-hero .ph-eyebrow svg { width: 14px; height: 14px; }
+
+.page-hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+
+.page-hero p {
+  font-size: 15.5px;
+  opacity: 0.92;
+  margin-top: 14px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.container-narrow { max-width: 840px; margin: 0 auto; padding: 0 24px; }
+
+.section-pad { padding: 60px 0; }
+.section-pad-sm { padding: 44px 0; }
+
+.alt-bg { background: var(--ccw-white); }
+
+.section-head {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.section-head .sh-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--ccw-red);
+  background: var(--ccw-red-tint);
+  padding: 6px 13px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.section-head h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  letter-spacing: -0.4px;
+}
+
+.section-head p {
+  font-size: 15px;
+  color: var(--ccw-gray-500);
+  margin-top: 10px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+
+/* ---------- Feature blocks ---------- */
+.feature-card {
+  background: var(--ccw-white);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius);
+  padding: 28px;
+  box-shadow: var(--ccw-shadow-sm);
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ccw-red), var(--ccw-red-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ccw-shadow-md);
+  border-color: var(--ccw-gray-300);
+}
+
+.feature-card:hover::before { transform: scaleX(1); }
+
+.feature-card .fc-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, var(--ccw-red-tint), var(--ccw-red-tint-2));
+  color: var(--ccw-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.feature-card .fc-icon svg { width: 28px; height: 28px; }
+
+.feature-card h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  margin-bottom: 9px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: var(--ccw-gray-600);
+  line-height: 1.7;
+}
+
+/* ---------- Step flow (how it works) ---------- */
+.flow-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--ccw-white);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius);
+  padding: 24px;
+  box-shadow: var(--ccw-shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.flow-step:hover {
+  box-shadow: var(--ccw-shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--ccw-red-tint-2);
+}
+
+.flow-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, var(--ccw-red), var(--ccw-red-dark));
+  color: var(--ccw-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 19px;
+  flex-shrink: 0;
+  box-shadow: 0 6px 14px rgba(196, 30, 58, 0.28);
+}
+
+.flow-content h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  margin-bottom: 7px;
+}
+
+.flow-content p {
+  font-size: 14px;
+  color: var(--ccw-gray-600);
+  line-height: 1.7;
+}
+
+/* ---------- Stats strip (info pages) ---------- */
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: var(--ccw-white);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius);
+  overflow: hidden;
+  box-shadow: var(--ccw-shadow-sm);
+}
+
+.stat-strip .ss-cell {
+  padding: 26px 24px;
+  border-right: 1px solid var(--ccw-gray-200);
+  text-align: center;
+}
+
+.stat-strip .ss-cell:last-child { border-right: none; }
+
+.stat-strip .ss-value {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--ccw-red);
+  letter-spacing: -0.5px;
+}
+
+.stat-strip .ss-label {
+  font-size: 13px;
+  color: var(--ccw-gray-500);
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* ---------- Role card ---------- */
+.role-card {
+  background: var(--ccw-white);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius-lg);
+  padding: 30px;
+  text-align: center;
+  box-shadow: var(--ccw-shadow-sm);
+  transition: all 0.2s ease;
+  height: 100%;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ccw-shadow-md);
+  border-color: var(--ccw-red-tint-2);
+}
+
+.role-card .rc-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, var(--ccw-red-tint), var(--ccw-red-tint-2));
+  color: var(--ccw-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.role-card .rc-icon svg { width: 34px; height: 34px; }
+
+.role-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  margin-bottom: 12px;
+}
+
+.role-card p {
+  font-size: 14px;
+  color: var(--ccw-gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* ---------- FAQ ---------- */
+.faq-item {
+  background: var(--ccw-white);
+  border: 1px solid var(--ccw-gray-200);
+  border-radius: var(--ccw-radius);
+  padding: 22px 24px;
+  box-shadow: var(--ccw-shadow-sm);
+  transition: border-color 0.2s ease;
+}
+
+.faq-item:hover { border-color: var(--ccw-red-tint-2); }
+
+.faq-item .fq-q {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ccw-gray-900);
+  margin-bottom: 10px;
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+}
+
+.faq-item .fq-q .fq-mark {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: var(--ccw-red-tint);
+  color: var(--ccw-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.faq-item .fq-a {
+  font-size: 14px;
+  color: var(--ccw-gray-600);
+  line-height: 1.7;
+  padding-left: 37px;
+}
+
+/* ---------- Misc utilities ---------- */
+.text-center { text-align: center; }
+.text-red { color: var(--ccw-red); }
+.text-green { color: var(--ccw-green); }
+.text-gray { color: var(--ccw-gray-500); }
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }
+.flex { display: flex; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.gap-8 { gap: 8px; } .gap-12 { gap: 12px; } .gap-16 { gap: 16px; }
+.wrap { flex-wrap: wrap; }
+.muted { color: var(--ccw-gray-500); }
+.divider { height: 1px; background: var(--ccw-gray-200); margin: 20px 0; }
+
+.alert {
+  padding: 13px 17px;
+  border-radius: var(--ccw-radius-sm);
+  font-size: 13.5px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+}
+.alert svg { width: 19px; height: 19px; flex-shrink: 0; margin-top: 1px; }
+.alert-info { background: var(--ccw-blue-light); color: #1e40af; border: 1px solid #bfdbfe; }
+.alert-info svg { color: var(--ccw-blue); }
+.alert-success { background: var(--ccw-green-light); color: #14532d; border: 1px solid #bbf7d0; }
+.alert-success svg { color: var(--ccw-green-dark); }
+
+.kv-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--ccw-gray-100);
+  font-size: 13.5px;
+}
+.kv-row:last-child { border-bottom: none; }
+.kv-row .kv-key { color: var(--ccw-gray-500); }
+.kv-row .kv-val { font-weight: 700; color: var(--ccw-gray-900); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .grid-7 { grid-template-columns: repeat(4, 1fr); }
+  .login-split { grid-template-columns: 1fr; }
+  .login-aside { padding: 40px 32px; }
+  .login-main { padding: 36px 32px; }
+}
+
+@media (max-width: 1024px) {
+  .grid-6 { grid-template-columns: repeat(3, 1fr); }
+  .cols-7-5, .cols-3-2, .cols-2-1 { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .stat-strip { grid-template-columns: repeat(2, 1fr); }
+  .stat-strip .ss-cell:nth-child(2) { border-right: none; }
+  .stat-strip .ss-cell:nth-child(1), .stat-strip .ss-cell:nth-child(2) { border-bottom: 1px solid var(--ccw-gray-200); }
+}
+
+@media (max-width: 860px) {
+  .login-portals { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+  .grid-7 { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+  .sidebar { transform: translateX(-100%); transition: transform 0.25s ease; }
+  .sidebar.open { transform: translateX(0); }
+  .main-area { margin-left: 0; }
+  .menu-toggle { display: flex !important; }
+  .portal-form { grid-template-columns: 1fr !important; }
+  .portal-rail { width: 64px; }
+  .login-aside .la-stats { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .grid-2, .grid-3, .grid-4, .grid-6, .grid-7 { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .main-content { padding: 20px; }
+  .page-hero h1 { font-size: 26px; }
+  .page-hero { padding: 50px 20px; }
+  .section-head h2 { font-size: 24px; }
+  .footer-bottom { flex-direction: column; gap: 8px; }
+  .welcome-banner { flex-direction: column; align-items: flex-start; }
+  .stat-strip { grid-template-columns: 1fr; }
+  .stat-strip .ss-cell { border-right: none; border-bottom: 1px solid var(--ccw-gray-200); }
+}
+
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--ccw-gray-200);
+  background: var(--ccw-white);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ccw-gray-700);
+}
+
+
+/* ===== Single-file view router ===== */
+.view { display: none; }
+.view.is-active { display: block; }
+
+  </style>
+</head>
+<body>
+<section class="view" id="page-index" data-title="CCW - Save Little Lives | Secure Healthcare Crowdfunding Portal" data-desc="CCW Save Little Lives is a verified healthcare crowdfunding platform connecting hospitals, donors, and government health authorities to fund life-saving treatment for children.">
+<!-- Top Navigation Bar -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="#page-index" class="brand">
+        <span class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">CCW</span><span class="brand-tag">Save Little Lives</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#page-index" class="active">Login</a></li>
+        <li><a href="#page-about">About</a></li>
+        <li><a href="#page-how-it-works">How It Works</a></li>
+        <li><a href="#page-transparency">Transparency</a></li>
+        <li><a href="#page-contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Split-screen login -->
+  <section class="login-split">
+
+    <!-- Branding aside -->
+    <aside class="login-aside">
+      <div class="la-inner">
+        <span class="la-eyebrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Verified Healthcare Crowdfunding
+        </span>
+        <div class="la-mark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+        </div>
+        <h1>Every Child Deserves a Chance to Heal</h1>
+        <p class="la-lead">CCW connects verified hospitals with compassionate donors and government health authorities, ensuring transparent funding reaches the children who need life-saving treatment the most.</p>
+        <div class="la-stats">
+          <div class="la-stat">
+            <div class="las-value">1,284</div>
+            <div class="las-label">Children Supported</div>
+          </div>
+          <div class="la-stat">
+            <div class="las-value">Rs. 6.4 Cr</div>
+            <div class="las-label">Funds Raised</div>
+          </div>
+          <div class="la-stat">
+            <div class="las-value">312</div>
+            <div class="las-label">Partner Hospitals</div>
+          </div>
+        </div>
+      </div>
+      <div class="la-footer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Bank-grade encryption &middot; Government audited &middot; 100% fund traceability
+      </div>
+    </aside>
+
+    <!-- Login main -->
+    <div class="login-main">
+      <div class="lm-head">
+        <h2>Select Your Portal to Continue</h2>
+        <p>Choose the access point that matches your role. Each portal is secured and tailored to your responsibilities.</p>
+      </div>
+
+      <div class="login-portals">
+
+        <!-- Hospital Portal -->
+        <div class="portal-card">
+          <div class="portal-rail">
+            <span class="portal-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/><path d="M9 18v.01"/></svg>
+            </span>
+          </div>
+          <div class="portal-body">
+            <div class="pb-head">
+              <span class="pb-title">Hospital Portal</span>
+              <span class="badge badge-active">For Medical Staff</span>
+            </div>
+            <p class="pb-desc">Register and manage patient cases, upload medical documents, and track funding status for the children under your care.</p>
+            <form class="portal-form" data-demo data-demo-message="Hospital credentials verified. Redirecting to the hospital dashboard...">
+              <div class="form-group">
+                <label class="form-label" for="hosp-id">Hospital ID</label>
+                <input class="form-control" id="hosp-id" type="text" placeholder="GGH-2025-0142" value="GGH-2025-0142" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="hosp-pw">Password</label>
+                <div class="input-group">
+                  <input class="form-control" id="hosp-pw" type="password" placeholder="Enter password" value="hospitalsecure" />
+                  <button type="button" class="toggle-pw" aria-label="Show password"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </form>
+            <div class="pb-extras">
+              <a href="#page-register-case" class="link-arrow">Go to case registration
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+              <span class="text-gray" style="font-size:12.5px;">Demo credentials pre-filled</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Donor Portal -->
+        <div class="portal-card">
+          <div class="portal-rail">
+            <span class="portal-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/><path d="M9 8h6"/><path d="M12 5v6"/></svg>
+            </span>
+          </div>
+          <div class="portal-body">
+            <div class="pb-head">
+              <span class="pb-title">Donor Portal</span>
+              <span class="badge badge-approved">For Contributors</span>
+            </div>
+            <p class="pb-desc">Browse verified cases, contribute securely, and track the real-world impact of every rupee you donate to a child's treatment.</p>
+            <form class="portal-form" data-demo data-demo-message="Donor credentials verified. Redirecting to the donor dashboard...">
+              <div class="form-group">
+                <label class="form-label" for="donor-email">Email Address</label>
+                <input class="form-control" id="donor-email" type="email" placeholder="you@example.com" value="anita.sharma@example.com" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="donor-pw">Password</label>
+                <div class="input-group">
+                  <input class="form-control" id="donor-pw" type="password" placeholder="Enter password" value="donorsecure" />
+                  <button type="button" class="toggle-pw" aria-label="Show password"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </form>
+            <div class="pb-extras">
+              <a href="#page-donor-dashboard" class="link-arrow">View donor dashboard
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+              <span class="text-gray" style="font-size:12.5px;">Demo credentials pre-filled</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Government Health Authority Portal -->
+        <div class="portal-card">
+          <div class="portal-rail">
+            <span class="portal-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-5h6v5"/><path d="M9 12h.01"/><path d="M15 12h.01"/></svg>
+            </span>
+          </div>
+          <div class="portal-body">
+            <div class="pb-head">
+              <span class="pb-title">Government Health Authority</span>
+              <span class="badge badge-pending">For Officials</span>
+            </div>
+            <p class="pb-desc">Review and verify submitted cases, monitor fund disbursement, and ensure compliance across all participating hospitals.</p>
+            <form class="portal-form" data-demo data-demo-message="Authority credentials verified. Redirecting to the authority dashboard...">
+              <div class="form-group">
+                <label class="form-label" for="auth-id">Official ID</label>
+                <input class="form-control" id="auth-id" type="text" placeholder="GHA-OFF-0087" value="GHA-OFF-0087" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="auth-pw">Secure Password</label>
+                <div class="input-group">
+                  <input class="form-control" id="auth-pw" type="password" placeholder="Enter secure password" value="authoritysecure" />
+                  <button type="button" class="toggle-pw" aria-label="Show password"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </form>
+            <div class="pb-extras">
+              <a href="#page-authority-dashboard" class="link-arrow">View authority dashboard
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+              <span class="text-gray" style="font-size:12.5px;">Demo credentials pre-filled</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Security strip -->
+  <div class="security-strip">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    Protected by end-to-end encryption and multi-layer verification
+    <div class="sec-pills">
+      <span class="sec-pill">SSL Secured</span>
+      <span class="sec-pill">Aadhaar Verified</span>
+      <span class="sec-pill">Govt. Audited</span>
+      <span class="sec-pill">ISO 27001</span>
+    </div>
+  </div>
+
+</section>
+<section class="view" id="page-register-case" data-title="Register New Case | CCW - Save Little Lives" data-desc="Hospital workflow to register a new patient case for crowdfunding on the CCW Save Little Lives platform.">
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">CCW</span><span class="brand-tag">Save Little Lives</span></span>
+      </div>
+      <ul class="sidebar-nav">
+        <li class="nav-section-title">Hospital Portal</li>
+        <li><a href="#page-authority-dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg> Dashboard</a></li>
+        <li><a href="#page-register-case" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15h6"/></svg> Register New Case</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/><path d="M8 9h2"/></svg> My Cases</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg> Approved Cases</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6"/><path d="M9 9l6 6"/></svg> Rejected Cases</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg> Reports</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Profile</a></li>
+        <li><a href="#page-index"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg> Logout</a></li>
+      </ul>
+      <div class="sidebar-user">
+        <div class="sidebar-user-card">
+          <div class="sidebar-user-avatar">GH</div>
+          <div class="sidebar-user-info">
+            <div class="su-name">Govt. General Hospital</div>
+            <div class="su-role">Hospital Administrator</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main-area">
+      <header class="main-header">
+        <div class="flex gap-12" style="align-items:center;">
+          <button class="menu-toggle"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+          <div>
+            <div class="mh-title">Register New Case</div>
+            <div class="mh-subtitle">Govt. General Hospital &middot; 19 May 2025, Monday, 10:30 AM</div>
+          </div>
+        </div>
+        <div class="mh-right">
+          <button class="icon-btn" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="notif-dot"></span></button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div style="max-width:880px; margin:0 auto;">
+
+          <!-- Stepper -->
+          <div class="stepper">
+            <div class="step active"><span class="step-circle">1</span><span class="step-label">Patient Details</span></div>
+            <div class="step-line"></div>
+            <div class="step"><span class="step-circle">2</span><span class="step-label">Treatment Details</span></div>
+            <div class="step-line"></div>
+            <div class="step"><span class="step-circle">3</span><span class="step-label">Review &amp; Submit</span></div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="card card-pad step-panel" id="step1">
+            <div class="flex-between mb-20">
+              <div>
+                <div class="section-title">Patient Details</div>
+                <div class="section-sub">Enter the basic information of the child requiring treatment.</div>
+              </div>
+              <span class="badge badge-pending">Step 1 of 3</span>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label">Patient Name <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter patient name" value="Rahul Kumar" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Age <span class="req">*</span></label>
+                <select class="form-control"><option>4 years</option><option>5 years</option><option>6 years</option></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Gender <span class="req">*</span></label>
+                <select class="form-control"><option>Select gender</option><option>Male</option><option>Female</option><option>Other</option></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Guardian / Parent Name <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter guardian name" value="Suresh Kumar" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Relationship <span class="req">*</span></label>
+                <select class="form-control"><option>Father</option><option>Mother</option><option>Guardian</option></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone Number <span class="req">*</span></label>
+                <input class="form-control" type="tel" placeholder="Enter phone number" value="98765 43210" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Hospital Department <span class="req">*</span></label>
+                <select class="form-control"><option>Cardiology</option><option>Nephrology</option><option>Oncology</option><option>Pediatrics</option></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Treating Doctor <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter doctor name" value="Dr. Meena Sharma" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Upload Medical Reports <span class="req">*</span></label>
+              <div class="upload-area">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
+                <div>Click to upload file</div>
+                <div class="up-hint">Max 1 file &middot; Max size 5MB &middot; PDF, JPG, PNG</div>
+              </div>
+            </div>
+
+            <div class="flex-between mt-16">
+              <a href="#page-authority-dashboard" class="btn btn-ghost">Cancel</a>
+              <button class="btn btn-primary" data-step-next="#step2" data-step-index="1">Next Step
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="card card-pad step-panel" id="step2" style="display:none;">
+            <div class="flex-between mb-20">
+              <div>
+                <div class="section-title">Treatment Details</div>
+                <div class="section-sub">Provide the treatment plan and estimated cost breakdown.</div>
+              </div>
+              <span class="badge badge-pending">Step 2 of 3</span>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label">Hospital Department <span class="req">*</span></label>
+                <select class="form-control"><option>Cardiology</option><option>Nephrology</option><option>Oncology</option></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Treatment Type <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter treatment type" value="Heart Surgery" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Estimated Cost (INR) <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter estimated cost" value="2,50,000" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Treatment Duration (Days) <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter duration in days" value="45" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Treatment Description <span class="req">*</span></label>
+              <textarea class="form-control" placeholder="Describe the treatment plan">Surgical correction of congenital heart defect requiring immediate intervention.</textarea>
+            </div>
+
+            <div class="info-box mb-16">
+              <strong>Important:</strong> Estimated cost should include surgery, medication, hospital stay and post-operative care. Exclude travel and personal expenses.
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Source of Funds Required <span class="req">*</span></label>
+              <select class="form-control"><option>Crowdfunding</option><option>Government Scheme</option><option>Partial Insurance + Crowdfunding</option></select>
+            </div>
+
+            <div class="card card-pad mb-16" style="background:var(--ccw-gray-50);">
+              <div class="section-title" style="font-size:15px;">Bank Details (for Fund Transfer)</div>
+              <div class="grid grid-2 mt-16">
+                <div class="form-group">
+                  <label class="form-label">Account Holder Name</label>
+                  <input class="form-control" type="text" value="Rahul Kumar" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Account Number</label>
+                  <input class="form-control" type="text" value="1234567890" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">IFSC Code</label>
+                  <input class="form-control" type="text" value="SBIN0001234" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">UPI ID</label>
+                  <input class="form-control" type="text" value="example@upi.id" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Required Documents / Qualifications</label>
+              <div class="flex wrap gap-12">
+                <label class="checkbox-row"><input type="checkbox" checked /> Medical Reports</label>
+                <label class="checkbox-row"><input type="checkbox" checked /> Income Certificate</label>
+                <label class="checkbox-row"><input type="checkbox" checked /> Hospital Estimate</label>
+                <label class="checkbox-row"><input type="checkbox" /> Aadhaar Card</label>
+                <label class="checkbox-row"><input type="checkbox" checked /> Doctor's Prescription</label>
+              </div>
+            </div>
+
+            <div class="flex-between mt-16">
+              <button class="btn btn-ghost" data-step-back="#step1" data-step-index="0">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                Back
+              </button>
+              <button class="btn btn-primary" data-step-next="#step3" data-step-index="2">Next Step
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="card card-pad step-panel" id="step3" style="display:none;">
+            <div class="flex-between mb-20">
+              <div>
+                <div class="section-title">Review &amp; Submit</div>
+                <div class="section-sub">Please review all details before submitting the case.</div>
+              </div>
+              <span class="badge badge-pending">Step 3 of 3</span>
+            </div>
+
+            <!-- Patient details review -->
+            <div class="card card-pad mb-16">
+              <div class="flex-between mb-16">
+                <div class="section-title" style="font-size:15px;">Patient Details</div>
+                <button class="btn btn-ghost btn-sm" data-step-back="#step1" data-step-index="0">Edit</button>
+              </div>
+              <div class="grid grid-2">
+                <div><span class="muted">Patient Name:</span> <strong>Rahul Kumar</strong></div>
+                <div><span class="muted">Age:</span> <strong>4 years</strong></div>
+                <div><span class="muted">Gender:</span> <strong>Male</strong></div>
+                <div><span class="muted">Guardian:</span> <strong>Suresh Kumar (Father)</strong></div>
+                <div><span class="muted">Phone:</span> <strong>98765 43210</strong></div>
+                <div><span class="muted">Department:</span> <strong>Cardiology</strong></div>
+                <div><span class="muted">Treating Doctor:</span> <strong>Dr. Meena Sharma</strong></div>
+              </div>
+            </div>
+
+            <!-- Treatment details review -->
+            <div class="card card-pad mb-16">
+              <div class="flex-between mb-16">
+                <div class="section-title" style="font-size:15px;">Treatment Details</div>
+                <button class="btn btn-ghost btn-sm" data-step-back="#step2" data-step-index="1">Edit</button>
+              </div>
+              <div class="grid grid-2">
+                <div><span class="muted">Treatment Type:</span> <strong>Heart Surgery</strong></div>
+                <div><span class="muted">Estimated Cost:</span> <strong class="text-red">Rs. 2,50,000</strong></div>
+                <div><span class="muted">Treatment Duration:</span> <strong>45 Days</strong></div>
+                <div><span class="muted">Source of Funds:</span> <strong>Crowdfunding</strong></div>
+              </div>
+              <div class="divider"></div>
+              <div class="section-title" style="font-size:14px; margin-bottom:10px;">Bank Details</div>
+              <div class="grid grid-2">
+                <div><span class="muted">Account Holder:</span> <strong>Rahul Kumar</strong></div>
+                <div><span class="muted">Account Number:</span> <strong>1234567890</strong></div>
+                <div><span class="muted">IFSC Code:</span> <strong>SBIN0001234</strong></div>
+                <div><span class="muted">UPI ID:</span> <strong>example@upi.id</strong></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-row"><input type="checkbox" /> I declare that the information provided is true and accurate to the best of my knowledge. I understand that false information may lead to rejection of the case and legal action as per government regulations.</label>
+            </div>
+
+            <div class="form-feedback"></div>
+
+            <div class="flex-between mt-16">
+              <button class="btn btn-ghost" data-step-back="#step2" data-step-index="1">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                Back
+              </button>
+              <form data-demo data-demo-message="Case submitted successfully. It is now awaiting approval from the Government Health Authority." style="display:contents;">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Case</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+</section>
+<section class="view" id="page-authority-dashboard" data-title="Authority Dashboard | CCW - Save Little Lives" data-desc="Government Health Authority dashboard for reviewing, verifying, and monitoring crowdfunded pediatric cases on the CCW platform.">
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">CCW</span><span class="brand-tag">Save Little Lives</span></span>
+      </div>
+      <ul class="sidebar-nav">
+        <li class="nav-section-title">Authority Portal</li>
+        <li><a href="#page-authority-dashboard" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg> Dashboard</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Pending Verification <span class="nav-badge">5</span></a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg> Approved Cases</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6"/><path d="M9 9l6 6"/></svg> Rejected Cases</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg> Reports</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Fund Disbursement</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Profile</a></li>
+        <li><a href="#page-index"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg> Logout</a></li>
+      </ul>
+      <div class="sidebar-user">
+        <div class="sidebar-user-card">
+          <div class="sidebar-user-avatar">RS</div>
+          <div class="sidebar-user-info">
+            <div class="su-name">Dr. Rajesh Singh</div>
+            <div class="su-role">Senior Health Official</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main-area">
+      <header class="main-header">
+        <div class="flex gap-12" style="align-items:center;">
+          <button class="menu-toggle"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+          <div>
+            <div class="mh-title">Authority Dashboard</div>
+            <div class="mh-subtitle">Ministry of Health &middot; 19 May 2025, Monday, 10:30 AM</div>
+          </div>
+        </div>
+        <div class="mh-right">
+          <button class="icon-btn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
+          <button class="icon-btn" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="notif-dot"></span></button>
+        </div>
+      </header>
+
+      <main class="main-content">
+
+        <!-- Welcome banner -->
+        <div class="welcome-banner">
+          <div class="wb-content">
+            <span class="wb-eyebrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Oversight & Verification
+            </span>
+            <div class="wb-title">Welcome back, Dr. Rajesh Singh</div>
+            <div class="wb-sub">You have 5 cases awaiting verification and Rs. 84,50,000 pending disbursement approval. All submissions have been pre-screened by the hospital validation team.</div>
+          </div>
+          <div class="wb-action">
+            <a href="#" class="btn btn-dark">Review Pending Cases</a>
+          </div>
+        </div>
+
+        <!-- Stat cards -->
+        <div class="stat-grid grid-4 mb-24">
+          <div class="stat-card accent-red">
+            <div class="stat-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">42</div>
+              <div class="stat-label">Total Cases Reviewed</div>
+              <div class="stat-trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l10-10"/><path d="M17 7v6"/><path d="M17 7h-6"/></svg> +12% this month</div>
+            </div>
+          </div>
+          <div class="stat-card accent-amber">
+            <div class="stat-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">5</div>
+              <div class="stat-label">Pending Verification</div>
+              <div class="stat-trend flat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg> Awaiting review</div>
+            </div>
+          </div>
+          <div class="stat-card accent-green">
+            <div class="stat-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">35</div>
+              <div class="stat-label">Cases Approved</div>
+              <div class="stat-trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l10-10"/><path d="M17 7v6"/><path d="M17 7h-6"/></svg> +8% this month</div>
+            </div>
+          </div>
+          <div class="stat-card accent-blue">
+            <div class="stat-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">Rs. 84.5L</div>
+              <div class="stat-label">Pending Disbursement</div>
+              <div class="stat-trend down"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10"/><path d="M7 17V7h10"/></svg> -3% vs last month</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary stats -->
+        <div class="stat-grid grid-4 mb-24">
+          <div class="stat-card accent-purple">
+            <div class="stat-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">2</div>
+              <div class="stat-label">Cases Rejected</div>
+              <div class="stat-trend flat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg> Documentation gaps</div>
+            </div>
+          </div>
+          <div class="stat-card accent-teal">
+            <div class="stat-icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">312</div>
+              <div class="stat-label">Partner Hospitals</div>
+              <div class="stat-trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l10-10"/><path d="M17 7v6"/><path d="M17 7h-6"/></svg> +6 new this quarter</div>
+            </div>
+          </div>
+          <div class="stat-card accent-red">
+            <div class="stat-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">8,420</div>
+              <div class="stat-label">Active Donors</div>
+              <div class="stat-trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l10-10"/><path d="M17 7v6"/><path d="M17 7h-6"/></svg> +18% growth</div>
+            </div>
+          </div>
+          <div class="stat-card accent-green">
+            <div class="stat-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">Rs. 6.4Cr</div>
+              <div class="stat-label">Total Disbursed</div>
+              <div class="stat-trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l10-10"/><path d="M17 7v6"/><path d="M17 7h-6"/></svg> +22% YTD</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts row -->
+        <div class="cols-3-2 mb-24">
+          <!-- Monthly approvals mini chart -->
+          <div class="card card-pad">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Monthly Case Approvals</div>
+                <div class="section-sub">Approved cases over the last six months</div>
+              </div>
+              <span class="badge badge-approved no-dot">Last 6 months</span>
+            </div>
+            <div class="mini-chart mt-16">
+              <div class="mc-bar" style="height:45%"></div>
+              <div class="mc-bar" style="height:60%"></div>
+              <div class="mc-bar fill" style="height:75%"></div>
+              <div class="mc-bar" style="height:50%"></div>
+              <div class="mc-bar fill" style="height:90%"></div>
+              <div class="mc-bar fill" style="height:100%"></div>
+            </div>
+            <div class="mini-chart mc-labels">
+              <span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span>
+            </div>
+            <div class="divider"></div>
+            <div class="flex-between">
+              <div class="text-gray" style="font-size:13px;">Average approval time</div>
+              <div class="fw-800" style="font-size:15px; color:var(--ccw-green-dark);">2.4 days</div>
+            </div>
+          </div>
+
+          <!-- Case distribution donut -->
+          <div class="card card-pad">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Case Distribution</div>
+                <div class="section-sub">Current status breakdown</div>
+              </div>
+            </div>
+            <div class="flex gap-16" style="align-items:center; margin-top:16px;">
+              <div class="donut" style="background: conic-gradient(var(--ccw-green) 0 83%, var(--ccw-amber) 83% 95%, var(--ccw-red) 95% 100%);">
+                <div class="donut-val">42</div>
+                <div class="donut-cap">Total Cases</div>
+              </div>
+              <div class="legend" style="flex:1;">
+                <div class="lg-row"><span class="lg-dot green"></span> Approved <span class="lg-val">35</span></div>
+                <div class="lg-row"><span class="lg-dot amber"></span> Pending <span class="lg-val">5</span></div>
+                <div class="lg-row"><span class="lg-dot red"></span> Rejected <span class="lg-val">2</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pending cases table -->
+        <div class="card card-pad mb-24">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Cases Pending Verification</div>
+              <div class="section-sub">Submitted by hospitals, awaiting authority review</div>
+            </div>
+            <a href="#" class="link-arrow">View all
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="table-wrap mt-16">
+            <table class="data-table">
+              <thead>
+                <tr><th>Case ID</th><th>Patient</th><th>Hospital</th><th>Department</th><th>Amount</th><th>Submitted</th><th>Status</th><th>Action</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-strong">CCW-2025-0142</td>
+                  <td>Rahul Kumar</td>
+                  <td>Govt. General Hospital</td>
+                  <td>Cardiology</td>
+                  <td class="cell-amount">Rs. 2,50,000</td>
+                  <td>17 May 2025</td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Review</a></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">CCW-2025-0141</td>
+                  <td>Priya Nair</td>
+                  <td>City Children's Hospital</td>
+                  <td>Oncology</td>
+                  <td class="cell-amount">Rs. 5,80,000</td>
+                  <td>16 May 2025</td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Review</a></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">CCW-2025-0140</td>
+                  <td>Aarav Patel</td>
+                  <td>National Medical Centre</td>
+                  <td>Neurology</td>
+                  <td class="cell-amount">Rs. 4,20,000</td>
+                  <td>15 May 2025</td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Review</a></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">CCW-2025-0139</td>
+                  <td>Sneha Reddy</td>
+                  <td>Govt. General Hospital</td>
+                  <td>Pediatric Surgery</td>
+                  <td class="cell-amount">Rs. 1,75,000</td>
+                  <td>14 May 2025</td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Review</a></td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">CCW-2025-0138</td>
+                  <td>Vikram Singh</td>
+                  <td>City Children's Hospital</td>
+                  <td>Nephrology</td>
+                  <td class="cell-amount">Rs. 3,30,000</td>
+                  <td>13 May 2025</td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                  <td><a href="#" class="btn btn-primary btn-sm">Review</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Approved cases + Recent activity -->
+        <div class="cols-2-1 mb-24">
+          <div class="card card-pad">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Recently Approved Cases</div>
+                <div class="section-sub">Cases cleared for public fundraising</div>
+              </div>
+              <a href="#" class="link-arrow">View all
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="table-wrap mt-16">
+              <table class="data-table">
+                <thead>
+                  <tr><th>Case ID</th><th>Patient</th><th>Hospital</th><th>Amount</th><th>Approved</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cell-strong">CCW-2025-0135</td>
+                    <td>Ananya Gupta</td>
+                    <td>National Medical Centre</td>
+                    <td class="cell-amount">Rs. 3,90,000</td>
+                    <td>18 May 2025</td>
+                    <td><span class="badge badge-approved">Approved</span></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">CCW-2025-0134</td>
+                    <td>Karthik Rao</td>
+                    <td>Govt. General Hospital</td>
+                    <td class="cell-amount">Rs. 2,10,000</td>
+                    <td>17 May 2025</td>
+                    <td><span class="badge badge-approved">Approved</span></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">CCW-2025-0133</td>
+                    <td>Meera Joshi</td>
+                    <td>City Children's Hospital</td>
+                    <td class="cell-amount">Rs. 6,50,000</td>
+                    <td>16 May 2025</td>
+                    <td><span class="badge badge-approved">Approved</span></td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">CCW-2025-0132</td>
+                    <td>Aditya Verma</td>
+                    <td>National Medical Centre</td>
+                    <td class="cell-amount">Rs. 1,45,000</td>
+                    <td>15 May 2025</td>
+                    <td><span class="badge badge-approved">Approved</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Recent activity -->
+          <div class="card card-pad">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Recent Activity</div>
+                <div class="section-sub">Latest platform events</div>
+              </div>
+            </div>
+            <div class="mt-16">
+              <div class="activity-item">
+                <span class="activity-dot green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></span>
+                <div>
+                  <div class="activity-text">Case <strong>CCW-2025-0135</strong> approved for Ananya Gupta</div>
+                  <div class="activity-time">2 hours ago</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <span class="activity-dot amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+                <div>
+                  <div class="activity-text">New case <strong>CCW-2025-0142</strong> submitted by Govt. General Hospital</div>
+                  <div class="activity-time">5 hours ago</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <span class="activity-dot blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+                <div>
+                  <div class="activity-text">Rs. 4,50,000 disbursed to <strong>CCW-2025-0128</strong></div>
+                  <div class="activity-time">Yesterday</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <span class="activity-dot red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6"/><path d="M9 9l6 6"/></svg></span>
+                <div>
+                  <div class="activity-text">Case <strong>CCW-2025-0130</strong> rejected due to incomplete documentation</div>
+                  <div class="activity-time">2 days ago</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <span class="activity-dot green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+                <div>
+                  <div class="activity-text">New partner hospital <strong>St. Mary's Children's Hospital</strong> onboarded</div>
+                  <div class="activity-time">3 days ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick actions -->
+        <div class="card card-pad">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Quick Actions</div>
+              <div class="section-sub">Common administrative tasks</div>
+            </div>
+          </div>
+          <div class="grid grid-4 mt-16">
+            <a href="#" class="qa-tile">
+              <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+              <div class="qa-text"><div class="qa-title">Verify Case</div><div class="qa-sub">Review pending submissions</div></div>
+            </a>
+            <a href="#" class="qa-tile">
+              <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+              <div class="qa-text"><div class="qa-title">Disburse Funds</div><div class="qa-sub">Approve fund releases</div></div>
+            </a>
+            <a href="#" class="qa-tile">
+              <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></span>
+              <div class="qa-text"><div class="qa-title">Generate Report</div><div class="qa-sub">Export compliance data</div></div>
+            </a>
+            <a href="#" class="qa-tile">
+              <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+              <div class="qa-text"><div class="qa-title">Manage Hospitals</div><div class="qa-sub">Partner network settings</div></div>
+            </a>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+</section>
+<section class="view" id="page-donor-dashboard" data-title="Donor Dashboard | CCW - Save Little Lives" data-desc="Donor dashboard for tracking contributions, browsing verified cases, and monitoring the impact of your donations on the CCW Save Little Lives platform.">
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">CCW</span><span class="brand-tag">Save Little Lives</span></span>
+      </div>
+      <ul class="sidebar-nav">
+        <li class="nav-section-title">Donor Portal</li>
+        <li><a href="#page-donor-dashboard" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg> Dashboard</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg> Browse Cases</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> My Donations</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Tax Receipts</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg> Impact Reports</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Profile</a></li>
+        <li><a href="#page-index"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg> Logout</a></li>
+      </ul>
+      <div class="sidebar-user">
+        <div class="sidebar-user-card">
+          <div class="sidebar-user-avatar">AS</div>
+          <div class="sidebar-user-info">
+            <div class="su-name">Anita Sharma</div>
+            <div class="su-role">Verified Donor</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main-area">
+      <header class="main-header">
+        <div class="flex gap-12" style="align-items:center;">
+          <button class="menu-toggle"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+          <div>
+            <div class="mh-title">Donor Dashboard</div>
+            <div class="mh-subtitle">Welcome, Anita &middot; 19 May 2025, Monday, 10:30 AM</div>
+          </div>
+        </div>
+        <div class="mh-right">
+          <button class="icon-btn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
+          <button class="icon-btn" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="notif-dot"></span></button>
+        </div>
+      </header>
+
+      <main class="main-content">
+
+        <!-- Welcome / impact banner -->
+        <div class="welcome-banner">
+          <div class="wb-content">
+            <span class="wb-eyebrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+              Your Giving Impact
+            </span>
+            <div class="wb-title">Thank you for your generosity, Anita</div>
+            <div class="wb-sub">Your contributions have helped support 7 children across 4 hospitals. Together with 8,420 donors like you, we are building a future where no child is denied treatment.</div>
+          </div>
+          <div class="wb-action">
+            <a href="#" class="btn btn-dark">Donate to a New Case</a>
+          </div>
+        </div>
+
+        <!-- Stat cards -->
+        <div class="stat-grid grid-4 mb-24">
+          <div class="stat-card accent-red">
+            <div class="stat-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">Rs. 1,25,000</div>
+              <div class="stat-label">Total Donated</div>
+              <div class="stat-trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l10-10"/><path d="M17 7v6"/><path d="M17 7h-6"/></svg> +Rs. 35,000 this year</div>
+            </div>
+          </div>
+          <div class="stat-card accent-green">
+            <div class="stat-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">7</div>
+              <div class="stat-label">Children Supported</div>
+              <div class="stat-trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l10-10"/><path d="M17 7v6"/><path d="M17 7h-6"/></svg> +2 this quarter</div>
+            </div>
+          </div>
+          <div class="stat-card accent-blue">
+            <div class="stat-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">4</div>
+              <div class="stat-label">Active Cases Followed</div>
+              <div class="stat-trend flat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg> In progress</div>
+            </div>
+          </div>
+          <div class="stat-card accent-purple">
+            <div class="stat-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <div class="stat-body">
+              <div class="stat-value">Rs. 78,500</div>
+              <div class="stat-label">Tax Deductible (80G)</div>
+              <div class="stat-trend up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l10-10"/><path d="M17 7v6"/><path d="M17 7h-6"/></svg> Receipts ready</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent donations + Impact donut -->
+        <div class="cols-3-2 mb-24">
+          <div class="card card-pad">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Recent Donations</div>
+                <div class="section-sub">Your latest contributions to verified cases</div>
+              </div>
+              <a href="#" class="link-arrow">View all
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="table-wrap mt-16">
+              <table class="data-table">
+                <thead>
+                  <tr><th>Date</th><th>Case</th><th>Recipient</th><th>Hospital</th><th>Amount</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>18 May 2025</td>
+                    <td class="cell-strong">CCW-2025-0133</td>
+                    <td>Meera Joshi</td>
+                    <td>City Children's Hospital</td>
+                    <td class="cell-amount">Rs. 25,000</td>
+                    <td><span class="badge badge-approved">Received</span></td>
+                  </tr>
+                  <tr>
+                    <td>12 May 2025</td>
+                    <td class="cell-strong">CCW-2025-0128</td>
+                    <td>Karthik Rao</td>
+                    <td>Govt. General Hospital</td>
+                    <td class="cell-amount">Rs. 15,000</td>
+                    <td><span class="badge badge-approved">Received</span></td>
+                  </tr>
+                  <tr>
+                    <td>05 May 2025</td>
+                    <td class="cell-strong">CCW-2025-0133</td>
+                    <td>Meera Joshi</td>
+                    <td>City Children's Hospital</td>
+                    <td class="cell-amount">Rs. 10,000</td>
+                    <td><span class="badge badge-approved">Received</span></td>
+                  </tr>
+                  <tr>
+                    <td>28 Apr 2025</td>
+                    <td class="cell-strong">CCW-2025-0124</td>
+                    <td>Ananya Gupta</td>
+                    <td>National Medical Centre</td>
+                    <td class="cell-amount">Rs. 20,000</td>
+                    <td><span class="badge badge-approved">Received</span></td>
+                  </tr>
+                  <tr>
+                    <td>15 Apr 2025</td>
+                    <td class="cell-strong">CCW-2025-0119</td>
+                    <td>Aditya Verma</td>
+                    <td>National Medical Centre</td>
+                    <td class="cell-amount">Rs. 15,000</td>
+                    <td><span class="badge badge-approved">Received</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Impact donut -->
+          <div class="card card-pad">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Your Impact Summary</div>
+                <div class="section-sub">Contribution allocation by department</div>
+              </div>
+            </div>
+            <div class="flex gap-16" style="align-items:center; margin-top:16px;">
+              <div class="donut" style="background: conic-gradient(var(--ccw-red) 0 40%, var(--ccw-blue) 40% 68%, var(--ccw-green) 68% 88%, var(--ccw-amber) 88% 100%);">
+                <div class="donut-val">Rs. 1.25L</div>
+                <div class="donut-cap">Total Given</div>
+              </div>
+              <div class="legend" style="flex:1;">
+                <div class="lg-row"><span class="lg-dot red"></span> Oncology <span class="lg-val">Rs. 50K</span></div>
+                <div class="lg-row"><span class="lg-dot" style="background:var(--ccw-blue)"></span> Cardiology <span class="lg-val">Rs. 35K</span></div>
+                <div class="lg-row"><span class="lg-dot green"></span> Neurology <span class="lg-val">Rs. 25K</span></div>
+                <div class="lg-row"><span class="lg-dot amber"></span> Others <span class="lg-val">Rs. 15K</span></div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="alert alert-success" style="align-items:flex-start;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+              <div>You rank among the top 8% of donors on the platform. Thank you for leading by example.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active cases with progress -->
+        <div class="card card-pad mb-24">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Cases You Are Supporting</div>
+              <div class="section-sub">Track fundraising progress for children you have contributed to</div>
+            </div>
+            <a href="#" class="link-arrow">Browse more cases
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="grid grid-4 mt-16">
+
+            <div class="case-card">
+              <div class="cc-top">
+                <span class="cc-disease">Oncology Treatment</span>
+                <span class="badge badge-pending">Urgent</span>
+              </div>
+              <div class="cc-meta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                Meera Joshi &middot; City Children's Hospital
+              </div>
+              <div class="cc-amounts">
+                <span class="raised">Rs. 4,20,000 raised</span>
+                <span class="goal">of Rs. 6,50,000</span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width:65%"></div></div>
+              <div class="cc-pct"><span class="fw-800 text-red">65%</span> funded &middot; <span class="text-gray">14 days left</span></div>
+            </div>
+
+            <div class="case-card">
+              <div class="cc-top">
+                <span class="cc-disease">Heart Surgery</span>
+                <span class="badge badge-active">Active</span>
+              </div>
+              <div class="cc-meta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                Karthik Rao &middot; Govt. General Hospital
+              </div>
+              <div class="cc-amounts">
+                <span class="raised">Rs. 1,80,000 raised</span>
+                <span class="goal">of Rs. 2,10,000</span>
+              </div>
+              <div class="progress"><div class="progress-bar green" style="width:86%"></div></div>
+              <div class="cc-pct"><span class="fw-800 text-green">86%</span> funded &middot; <span class="text-gray">21 days left</span></div>
+            </div>
+
+            <div class="case-card">
+              <div class="cc-top">
+                <span class="cc-disease">Neurology Care</span>
+                <span class="badge badge-pending">Urgent</span>
+              </div>
+              <div class="cc-meta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                Ananya Gupta &middot; National Medical Centre
+              </div>
+              <div class="cc-amounts">
+                <span class="raised">Rs. 1,95,000 raised</span>
+                <span class="goal">of Rs. 3,90,000</span>
+              </div>
+              <div class="progress"><div class="progress-bar amber" style="width:50%"></div></div>
+              <div class="cc-pct"><span class="fw-800" style="color:var(--ccw-amber)">50%</span> funded &middot; <span class="text-gray">9 days left</span></div>
+            </div>
+
+            <div class="case-card">
+              <div class="cc-top">
+                <span class="cc-disease">Post-Op Recovery</span>
+                <span class="badge badge-approved">Near Goal</span>
+              </div>
+              <div class="cc-meta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                Aditya Verma &middot; National Medical Centre
+              </div>
+              <div class="cc-amounts">
+                <span class="raised">Rs. 1,30,000 raised</span>
+                <span class="goal">of Rs. 1,45,000</span>
+              </div>
+              <div class="progress"><div class="progress-bar green" style="width:90%"></div></div>
+              <div class="cc-pct"><span class="fw-800 text-green">90%</span> funded &middot; <span class="text-gray">30 days left</span></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Quick actions -->
+        <div class="card card-pad">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Quick Actions</div>
+              <div class="section-sub">Manage your giving and account</div>
+            </div>
+          </div>
+          <div class="grid grid-4 mt-16">
+            <a href="#" class="qa-tile">
+              <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></span>
+              <div class="qa-text"><div class="qa-title">Donate Now</div><div class="qa-sub">Support a verified case</div></div>
+            </a>
+            <a href="#" class="qa-tile">
+              <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span>
+              <div class="qa-text"><div class="qa-title">Download Receipts</div><div class="qa-sub">80G tax certificates</div></div>
+            </a>
+            <a href="#" class="qa-tile">
+              <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></span>
+              <div class="qa-text"><div class="qa-title">Impact Report</div><div class="qa-sub">View your full impact</div></div>
+            </a>
+            <a href="#" class="qa-tile">
+              <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+              <div class="qa-text"><div class="qa-title">Update Profile</div><div class="qa-sub">Manage account settings</div></div>
+            </a>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+</section>
+<section class="view" id="page-about" data-title="About Us | CCW - Save Little Lives" data-desc="Learn about CCW Save Little Lives, a verified healthcare crowdfunding platform uniting hospitals, donors, and government authorities to save children's lives.">
+<!-- Top Navigation Bar -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="#page-index" class="brand">
+        <span class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">CCW</span><span class="brand-tag">Save Little Lives</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#page-index">Login</a></li>
+        <li><a href="#page-about" class="active">About</a></li>
+        <li><a href="#page-how-it-works">How It Works</a></li>
+        <li><a href="#page-transparency">Transparency</a></li>
+        <li><a href="#page-contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page hero -->
+  <section class="page-hero mesh-bg">
+    <div class="ph-inner container text-center">
+      <span class="ph-eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Our Mission
+      </span>
+      <h1>Bridging Compassion and Care for Every Child</h1>
+      <p>CCW - Save Little Lives is a government-backed healthcare crowdfunding platform that connects verified hospitals, generous donors, and health authorities in a single transparent ecosystem, ensuring that no child is denied life-saving treatment because of cost.</p>
+    </div>
+  </section>
+
+  <!-- Stat strip -->
+  <section class="section-pad-sm alt-bg">
+    <div class="container">
+      <div class="stat-strip">
+        <div class="ss-cell">
+          <div class="ss-value">1,284</div>
+          <div class="ss-label">Children Supported</div>
+        </div>
+        <div class="ss-cell">
+          <div class="ss-value">Rs. 6.4 Cr</div>
+          <div class="ss-label">Funds Raised</div>
+        </div>
+        <div class="ss-cell">
+          <div class="ss-value">312</div>
+          <div class="ss-label">Partner Hospitals</div>
+        </div>
+        <div class="ss-cell">
+          <div class="ss-value">8,420</div>
+          <div class="ss-label">Active Donors</div>
+        </div>
+        <div class="ss-cell">
+          <div class="ss-value">100%</div>
+          <div class="ss-label">Fund Traceability</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section-pad">
+    <div class="container cols-2-1">
+      <div>
+        <div class="section-head">
+          <span class="sh-eyebrow">Who We Are</span>
+          <h2>A Unified Platform Built on Trust and Transparency</h2>
+        </div>
+        <p style="color:var(--ccw-gray-700); margin-bottom:16px;">CCW was established to address a critical gap in pediatric healthcare funding. Across the country, families facing catastrophic medical bills for their children often have no recourse when insurance, savings, and government schemes fall short. CCW closes that gap by creating a verified, audited pathway through which hospitals can submit genuine cases, donors can contribute with confidence, and government health authorities can oversee every transaction.</p>
+        <p style="color:var(--ccw-gray-700); margin-bottom:16px;">Unlike open crowdfunding platforms where authenticity is difficult to verify, every case on CCW begins with a hospital submission and undergoes a two-stage validation process. The hospital first confirms the medical details, estimated costs, and patient consent, and then a designated government health authority reviews and approves the case before it becomes visible to donors. This layered verification ensures that every rupee contributed reaches a genuinely verified need.</p>
+        <p style="color:var(--ccw-gray-700);">Our platform operates under the regulatory framework of the Department of Health and Family Welfare, with all fund disbursements routed directly to hospital accounts through audited banking channels. Donors receive 80G tax receipts, real-time impact updates, and full visibility into how their contributions are utilized, making CCW one of the most transparent healthcare funding initiatives in the country.</p>
+      </div>
+      <div class="card card-pad">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Platform at a Glance</div>
+            <div class="section-sub">Key operating principles</div>
+          </div>
+        </div>
+        <div class="mt-16">
+          <div class="kv-row">
+            <span class="kv-key">Established</span>
+            <span class="kv-val">2023</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Regulatory Body</span>
+            <span class="kv-val">Dept. of Health &amp; Family Welfare</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Verification Model</span>
+            <span class="kv-val">Two-stage hospital + authority</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Fund Routing</span>
+            <span class="kv-val">Direct to hospital accounts</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Tax Benefit</span>
+            <span class="kv-val">80G certified receipts</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Audit Frequency</span>
+            <span class="kv-val">Quarterly government audit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core values -->
+  <section class="section-pad alt-bg">
+    <div class="container">
+      <div class="section-head text-center" style="margin-bottom:36px;">
+        <span class="sh-eyebrow">What We Stand For</span>
+        <h2>Our Core Values</h2>
+        <p>The principles that guide every decision we make and every case we support.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="feature-card">
+          <div class="fc-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Verification First</h3>
+          <p>Every case is authenticated by a hospital and approved by a government authority before it reaches donors. Trust is never assumed, it is earned through process.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Radical Transparency</h3>
+          <p>Donors can trace every rupee from contribution to disbursement. Full case histories, hospital details, and fund flow records are always accessible.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3>Child-Centered Care</h3>
+          <p>Every decision prioritizes the child's medical needs and dignity. We partner only with hospitals that meet our pediatric care standards.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h3>Collective Responsibility</h3>
+          <p>We believe saving lives is a shared duty. Hospitals, donors, and authorities each carry a defined role in a single accountable system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stakeholders -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-head text-center" style="margin-bottom:36px;">
+        <span class="sh-eyebrow">The Ecosystem</span>
+        <h2>Three Stakeholders, One Mission</h2>
+        <p>CCW unites three distinct groups, each with clear responsibilities that together create a closed loop of accountability.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="role-card">
+          <div class="rc-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/></svg></div>
+          <h3>Hospitals</h3>
+          <p>Verified medical institutions submit patient cases with complete clinical documentation, estimated treatment costs, and consent records. They are the first line of authenticity, responsible for the accuracy of every case that enters the platform.</p>
+        </div>
+        <div class="role-card">
+          <div class="rc-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></div>
+          <h3>Donors</h3>
+          <p>Individuals and organizations contribute financially to verified cases, choosing the children they wish to support. Donors receive tax receipts, progress updates, and a transparent record of how their contribution was applied to treatment.</p>
+        </div>
+        <div class="role-card">
+          <div class="rc-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-5h6v5"/></svg></div>
+          <h3>Government Health Authority</h3>
+          <p>Designated officials review and approve submitted cases, monitor fund disbursement, and conduct periodic audits. They serve as the independent verifier that gives every case on the platform its public credibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="section-pad alt-bg">
+    <div class="container text-center">
+      <div class="section-head" style="margin-bottom:24px;">
+        <span class="sh-eyebrow">Get Involved</span>
+        <h2>Be Part of the Mission</h2>
+        <p>Whether you represent a hospital, wish to donate, or serve in a health authority, there is a role for you in saving little lives.</p>
+      </div>
+      <div class="flex gap-12 wrap" style="justify-content:center;">
+        <a href="#page-index" class="btn btn-primary btn-lg">Access Your Portal</a>
+        <a href="#page-how-it-works" class="btn btn-outline btn-lg">See How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <span class="brand-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg></span>
+        <p>CCW - Save Little Lives is a government-backed healthcare crowdfunding platform ensuring transparent funding for pediatric treatment across verified hospitals.</p>
+      </div>
+      <div class="footer-col"><h4>Platform</h4><ul><li><a href="#page-index">Home</a></li><li><a href="#page-about">About Us</a></li><li><a href="#page-how-it-works">How It Works</a></li><li><a href="#page-transparency">Transparency</a></li></ul></div>
+      <div class="footer-col"><h4>Portals</h4><ul><li><a href="#page-index">Hospital Login</a></li><li><a href="#page-index">Donor Login</a></li><li><a href="#page-index">Authority Login</a></li><li><a href="#page-register-case">Register a Case</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#page-contact">Contact Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Security</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2025 CCW - Save Little Lives. All rights reserved.</span><span>Department of Health &amp; Family Welfare</span></div>
+  </footer>
+
+</section>
+<section class="view" id="page-how-it-works" data-title="How It Works | CCW - Save Little Lives" data-desc="Understand the step-by-step process of how CCW Save Little Lives verifies cases, collects donations, and disburses funds for children's medical treatment.">
+<!-- Top Navigation Bar -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="#page-index" class="brand">
+        <span class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">CCW</span><span class="brand-tag">Save Little Lives</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#page-index">Login</a></li>
+        <li><a href="#page-about">About</a></li>
+        <li><a href="#page-how-it-works" class="active">How It Works</a></li>
+        <li><a href="#page-transparency">Transparency</a></li>
+        <li><a href="#page-contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page hero -->
+  <section class="page-hero mesh-bg">
+    <div class="ph-inner container text-center">
+      <span class="ph-eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        The Process
+      </span>
+      <h1>How CCW Saves Little Lives</h1>
+      <p>From the moment a hospital identifies a child in need to the day treatment is completed, every step on CCW is designed to be verified, transparent, and accountable. Here is how the journey unfolds.</p>
+    </div>
+  </section>
+
+  <!-- Step flow -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-head text-center" style="margin-bottom:36px;">
+        <span class="sh-eyebrow">The Journey of a Case</span>
+        <h2>Six Steps from Need to Treatment</h2>
+        <p>Each case follows a structured pathway that ensures authenticity at every stage.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="flow-step">
+          <div class="flow-num">1</div>
+          <div class="flow-content">
+            <h3>Hospital Identifies a Case</h3>
+            <p>A verified hospital identifies a pediatric patient whose family cannot afford the required treatment. The medical team assesses the clinical need and prepares an estimated treatment plan with associated costs.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-content">
+            <h3>Case Registration on CCW</h3>
+            <p>The hospital administrator submits the case through the CCW portal, entering patient details, treatment requirements, cost estimates, guardian consent, and uploading supporting medical documents for verification.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">3</div>
+          <div class="flow-content">
+            <h3>Government Authority Review</h3>
+            <p>A designated health authority official reviews the submitted case, cross-checks the medical documentation, and either approves, requests clarification, or rejects the case based on verification standards.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">4</div>
+          <div class="flow-content">
+            <h3>Case Goes Live for Donors</h3>
+            <p>Once approved, the case becomes visible on the donor portal with full transparency about the child's condition, treatment plan, hospital, and funding goal. Donors can review and choose which cases to support.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">5</div>
+          <div class="flow-content">
+            <h3>Donations Are Collected</h3>
+            <p>Donors contribute securely through verified payment channels. Every contribution is recorded against the specific case, and donors receive instant confirmation along with an 80G tax receipt for their records.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">6</div>
+          <div class="flow-content">
+            <h3>Funds Disbursed &amp; Treatment Begins</h3>
+            <p>When the funding goal is reached, the collected amount is disbursed directly to the hospital's verified account through audited banking channels. The hospital begins treatment and provides progress updates to donors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Role responsibilities -->
+  <section class="section-pad alt-bg">
+    <div class="container">
+      <div class="section-head text-center" style="margin-bottom:36px;">
+        <span class="sh-eyebrow">Shared Accountability</span>
+        <h2>Responsibilities of Each Stakeholder</h2>
+        <p>Clarity of roles is what makes the CCW model trustworthy. Each participant carries defined obligations.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="feature-card">
+          <div class="fc-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></div>
+          <h3>Hospital Responsibilities</h3>
+          <p>The hospital is responsible for accurate clinical documentation, honest cost estimation, obtaining guardian consent, submitting cases promptly, providing treatment updates, and maintaining records for audit. The hospital is the originator of every case and bears primary responsibility for its authenticity.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></div>
+          <h3>Donor Responsibilities</h3>
+          <p>Donors are responsible for reviewing case details before contributing, donating through official channels only, and keeping their receipts for tax purposes. While donors choose which cases to support, they rely on the platform's verification to ensure their contributions reach genuine needs.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-5h6v5"/></svg></div>
+          <h3>Authority Responsibilities</h3>
+          <p>The government health authority is responsible for reviewing submitted cases against verification standards, approving or rejecting submissions, monitoring fund disbursement, and conducting periodic audits of hospital compliance and fund utilization across the platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fund flow visualization -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-head text-center" style="margin-bottom:36px;">
+        <span class="sh-eyebrow">Money Trail</span>
+        <h2>How Funds Move Through CCW</h2>
+        <p>Every rupee is traceable from the moment a donor contributes to the moment it reaches the hospital.</p>
+      </div>
+      <div class="card card-pad">
+        <div class="grid grid-4 mt-16">
+          <div class="qa-tile">
+            <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></span>
+            <div class="qa-text"><div class="qa-title">1. Donor Contributes</div><div class="qa-sub">Secure payment to CCW escrow</div></div>
+          </div>
+          <div class="qa-tile">
+            <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <div class="qa-text"><div class="qa-title">2. CCW Verifies</div><div class="qa-sub">Funds held in audited escrow</div></div>
+          </div>
+          <div class="qa-tile">
+            <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></span>
+            <div class="qa-text"><div class="qa-title">3. Goal Reached</div><div class="qa-sub">Authority authorizes release</div></div>
+          </div>
+          <div class="qa-tile">
+            <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>
+            <div class="qa-text"><div class="qa-title">4. Hospital Receives</div><div class="qa-sub">Direct transfer to hospital account</div></div>
+          </div>
+        </div>
+        <div class="alert alert-info mt-24">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <div>CCW charges zero platform fees on donations. One hundred percent of every contribution is directed toward the child's treatment. Operational costs are covered separately by government funding and institutional partners.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-pad alt-bg">
+    <div class="container container-narrow">
+      <div class="section-head text-center" style="margin-bottom:36px;">
+        <span class="sh-eyebrow">Common Questions</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Answers to the questions we hear most often from hospitals, donors, and authorities.</p>
+      </div>
+      <div class="grid" style="gap:16px;">
+        <div class="faq-item">
+          <div class="fq-q"><span class="fq-mark">Q</span>How does CCW verify that a case is genuine?</div>
+          <div class="fq-a">Every case undergoes a two-stage verification. First, the submitting hospital confirms the medical details and cost estimates with supporting documentation. Second, a designated government health authority independently reviews and approves the case before it becomes visible to donors. No case reaches the donor portal without both checks being completed.</div>
+        </div>
+        <div class="faq-item">
+          <div class="fq-q"><span class="fq-mark">Q</span>Is my donation tax deductible?</div>
+          <div class="fq-a">Yes. CCW is a registered entity under Section 80G of the Income Tax Act. Every donation generates an automated 80G tax receipt that you can download from your donor dashboard and use when filing your annual tax return.</div>
+        </div>
+        <div class="faq-item">
+          <div class="fq-q"><span class="fq-mark">Q</span>How long does the approval process take?</div>
+          <div class="fq-a">On average, a case moves from hospital submission to authority approval in two to three business days, provided all documentation is complete. Cases flagged for clarification may take longer, and the hospital is notified immediately of any additional requirements.</div>
+        </div>
+        <div class="faq-item">
+          <div class="fq-q"><span class="fq-mark">Q</span>What happens if a case does not reach its funding goal?</div>
+          <div class="fq-a">If a case does not reach its full goal within the specified timeframe, the collected funds are still disbursed to the hospital toward the treatment, and the case may be extended or partially fulfilled based on the hospital's assessment of what can be achieved with the available amount.</div>
+        </div>
+        <div class="faq-item">
+          <div class="fq-q"><span class="fq-mark">Q</span>Can a hospital register multiple cases at once?</div>
+          <div class="fq-a">Yes. Verified hospitals can register and manage multiple concurrent cases through their portal. Each case is tracked independently with its own status, documentation, and funding progress, while a unified dashboard provides an overview of all active submissions.</div>
+        </div>
+        <div class="faq-item">
+          <div class="fq-q"><span class="fq-mark">Q</span>How are hospitals vetted to join the platform?</div>
+          <div class="fq-a">Hospitals must be recognized medical institutions with valid registration and pediatric care capabilities. They undergo an onboarding verification by the government health authority, which includes credential checks, infrastructure assessment, and a review of their financial controls before being granted submission access.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="section-pad">
+    <div class="container text-center">
+      <div class="section-head" style="margin-bottom:24px;">
+        <span class="sh-eyebrow">Ready to Begin</span>
+        <h2>Start Your Journey with CCW</h2>
+        <p>Access your portal or register a new case today and become part of a transparent healthcare funding ecosystem.</p>
+      </div>
+      <div class="flex gap-12 wrap" style="justify-content:center;">
+        <a href="#page-index" class="btn btn-primary btn-lg">Access Your Portal</a>
+        <a href="#page-register-case" class="btn btn-outline btn-lg">Register a Case</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <span class="brand-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg></span>
+        <p>CCW - Save Little Lives is a government-backed healthcare crowdfunding platform ensuring transparent funding for pediatric treatment across verified hospitals.</p>
+      </div>
+      <div class="footer-col"><h4>Platform</h4><ul><li><a href="#page-index">Home</a></li><li><a href="#page-about">About Us</a></li><li><a href="#page-how-it-works">How It Works</a></li><li><a href="#page-transparency">Transparency</a></li></ul></div>
+      <div class="footer-col"><h4>Portals</h4><ul><li><a href="#page-index">Hospital Login</a></li><li><a href="#page-index">Donor Login</a></li><li><a href="#page-index">Authority Login</a></li><li><a href="#page-register-case">Register a Case</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#page-contact">Contact Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Security</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2025 CCW - Save Little Lives. All rights reserved.</span><span>Department of Health &amp; Family Welfare</span></div>
+  </footer>
+
+</section>
+<section class="view" id="page-transparency" data-title="Transparency Report | CCW - Save Little Lives" data-desc="Transparency report for CCW Save Little Lives, including fund flow, approved case log, safeguards, and audit information for the healthcare crowdfunding platform.">
+<!-- Top Navigation Bar -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="#page-index" class="brand">
+        <span class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">CCW</span><span class="brand-tag">Save Little Lives</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#page-index">Login</a></li>
+        <li><a href="#page-about">About</a></li>
+        <li><a href="#page-how-it-works">How It Works</a></li>
+        <li><a href="#page-transparency" class="active">Transparency</a></li>
+        <li><a href="#page-contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page hero -->
+  <section class="page-hero mesh-bg">
+    <div class="ph-inner container text-center">
+      <span class="ph-eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Open Accountability
+      </span>
+      <h1>Transparency Report</h1>
+      <p>We believe that trust is built on visibility. This report provides an open view of how CCW operates, how funds flow, and what safeguards protect every contribution from the moment it is made to the moment it reaches a child's treatment.</p>
+    </div>
+  </section>
+
+  <!-- Platform summary stats -->
+  <section class="section-pad-sm alt-bg">
+    <div class="container">
+      <div class="stat-strip">
+        <div class="ss-cell">
+          <div class="ss-value">Rs. 6.4 Cr</div>
+          <div class="ss-label">Total Funds Raised</div>
+        </div>
+        <div class="ss-cell">
+          <div class="ss-value">Rs. 5.8 Cr</div>
+          <div class="ss-label">Total Disbursed</div>
+        </div>
+        <div class="ss-cell">
+          <div class="ss-value">1,284</div>
+          <div class="ss-label">Children Supported</div>
+        </div>
+        <div class="ss-cell">
+          <div class="ss-value">0%</div>
+          <div class="ss-label">Platform Fees</div>
+        </div>
+        <div class="ss-cell">
+          <div class="ss-value">Q4</div>
+          <div class="ss-label">Last Audit Cycle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fund allocation + distribution donut -->
+  <section class="section-pad">
+    <div class="container cols-3-2">
+      <div>
+        <div class="section-head">
+          <span class="sh-eyebrow">Where the Money Goes</span>
+          <h2>Fund Allocation Breakdown</h2>
+        </div>
+        <p style="color:var(--ccw-gray-700); margin-bottom:20px;">Every rupee donated through CCW is directed entirely toward the intended child's treatment. The platform charges zero fees on donations, and operational costs are covered separately by government funding and institutional partners. The breakdown below reflects how disbursed funds have been allocated across treatment categories during the current reporting period.</p>
+        <div class="grid grid-2">
+          <div class="qa-tile">
+            <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+            <div class="qa-text"><div class="qa-title">Rs. 2.3 Cr</div><div class="qa-sub">Oncology treatments</div></div>
+          </div>
+          <div class="qa-tile">
+            <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg></span>
+            <div class="qa-text"><div class="qa-title">Rs. 1.7 Cr</div><div class="qa-sub">Cardiac surgeries</div></div>
+          </div>
+          <div class="qa-tile">
+            <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <div class="qa-text"><div class="qa-title">Rs. 1.1 Cr</div><div class="qa-sub">Neurology care</div></div>
+          </div>
+          <div class="qa-tile">
+            <span class="qa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></span>
+            <div class="qa-text"><div class="qa-title">Rs. 0.7 Cr</div><div class="qa-sub">Other pediatric care</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-pad">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Disbursement Distribution</div>
+            <div class="section-sub">By treatment category</div>
+          </div>
+        </div>
+        <div class="flex gap-16" style="align-items:center; margin-top:16px;">
+          <div class="donut" style="background: conic-gradient(var(--ccw-red) 0 40%, var(--ccw-blue) 40% 69%, var(--ccw-green) 69% 88%, var(--ccw-amber) 88% 100%);">
+            <div class="donut-val">Rs. 5.8Cr</div>
+            <div class="donut-cap">Disbursed</div>
+          </div>
+          <div class="legend" style="flex:1;">
+            <div class="lg-row"><span class="lg-dot red"></span> Oncology <span class="lg-val">40%</span></div>
+            <div class="lg-row"><span class="lg-dot" style="background:var(--ccw-blue)"></span> Cardiology <span class="lg-val">29%</span></div>
+            <div class="lg-row"><span class="lg-dot green"></span> Neurology <span class="lg-val">19%</span></div>
+            <div class="lg-row"><span class="lg-dot amber"></span> Others <span class="lg-val">12%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approved case log -->
+  <section class="section-pad alt-bg">
+    <div class="container">
+      <div class="section-head" style="margin-bottom:24px;">
+        <span class="sh-eyebrow">Public Record</span>
+        <h2>Approved Case Log</h2>
+        <p>A sampling of recently approved cases showing hospital, department, amount, and status. The full log is available to registered donors and authorities.</p>
+      </div>
+      <div class="card card-pad">
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Case ID</th><th>Hospital</th><th>Department</th><th>Amount Approved</th><th>Date Approved</th><th>Fund Status</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell-strong">CCW-2025-0135</td>
+                <td>National Medical Centre</td>
+                <td>Neurology</td>
+                <td class="cell-amount">Rs. 3,90,000</td>
+                <td>18 May 2025</td>
+                <td><span class="badge badge-active">Fundraising</span></td>
+              </tr>
+              <tr>
+                <td class="cell-strong">CCW-2025-0134</td>
+                <td>Govt. General Hospital</td>
+                <td>Cardiology</td>
+                <td class="cell-amount">Rs. 2,10,000</td>
+                <td>17 May 2025</td>
+                <td><span class="badge badge-approved">Disbursed</span></td>
+              </tr>
+              <tr>
+                <td class="cell-strong">CCW-2025-0133</td>
+                <td>City Children's Hospital</td>
+                <td>Oncology</td>
+                <td class="cell-amount">Rs. 6,50,000</td>
+                <td>16 May 2025</td>
+                <td><span class="badge badge-active">Fundraising</span></td>
+              </tr>
+              <tr>
+                <td class="cell-strong">CCW-2025-0132</td>
+                <td>National Medical Centre</td>
+                <td>Pediatric Surgery</td>
+                <td class="cell-amount">Rs. 1,45,000</td>
+                <td>15 May 2025</td>
+                <td><span class="badge badge-approved">Disbursed</span></td>
+              </tr>
+              <tr>
+                <td class="cell-strong">CCW-2025-0128</td>
+                <td>Govt. General Hospital</td>
+                <td>Cardiology</td>
+                <td class="cell-amount">Rs. 2,10,000</td>
+                <td>10 May 2025</td>
+                <td><span class="badge badge-approved">Disbursed</span></td>
+              </tr>
+              <tr>
+                <td class="cell-strong">CCW-2025-0124</td>
+                <td>National Medical Centre</td>
+                <td>Neurology</td>
+                <td class="cell-amount">Rs. 3,90,000</td>
+                <td>05 May 2025</td>
+                <td><span class="badge badge-approved">Disbursed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safeguards -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-head text-center" style="margin-bottom:36px;">
+        <span class="sh-eyebrow">Built-In Protections</span>
+        <h2>Safeguards That Protect Every Contribution</h2>
+        <p>Multiple layers of verification and audit ensure that funds are used exactly as intended.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="feature-card">
+          <div class="fc-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Two-Stage Verification</h3>
+          <p>Every case is authenticated first by the submitting hospital and then independently approved by a government health authority before any donation is accepted.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div>
+          <h3>Quarterly Audits</h3>
+          <p>Government auditors review fund utilization, hospital compliance, and case documentation every quarter, with findings published in public audit reports.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h3>Escrow Holding</h3>
+          <p>Donations are held in audited escrow accounts until a case reaches its funding goal and the authority authorizes release, preventing premature or misuse of funds.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Full Traceability</h3>
+          <p>Donors can trace every contribution from payment to hospital disbursement. Transaction records, case updates, and fund receipts are permanently accessible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audit & compliance -->
+  <section class="section-pad alt-bg">
+    <div class="container cols-2-1">
+      <div class="card card-pad">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Audit &amp; Compliance Record</div>
+            <div class="section-sub">Regulatory oversight summary</div>
+          </div>
+        </div>
+        <div class="mt-16">
+          <div class="kv-row">
+            <span class="kv-key">Regulatory Authority</span>
+            <span class="kv-val">Dept. of Health &amp; Family Welfare</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Audit Frequency</span>
+            <span class="kv-val">Quarterly</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Last Audit Completed</span>
+            <span class="kv-val">March 2025 (Q4 FY 2024-25)</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Audit Outcome</span>
+            <span class="kv-val">Fully compliant, no discrepancies</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Security Certification</span>
+            <span class="kv-val">ISO 27001 (Information Security)</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Data Protection</span>
+            <span class="kv-val">DPDP Act 2023 compliant</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Banking Partner</span>
+            <span class="kv-val">Verified national banking channel</span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-key">Tax Registration</span>
+            <span class="kv-val">80G certified, PAN registered</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="sh-eyebrow">Independent Oversight</span>
+          <h2>Audited and Accountable</h2>
+        </div>
+        <p style="color:var(--ccw-gray-700); margin-bottom:16px;">CCW operates under continuous regulatory oversight. Every quarter, government auditors examine the platform's fund flow, case verification records, hospital compliance, and data security practices. The most recent audit, completed in March 2025, confirmed full compliance with no discrepancies identified across all reviewed categories.</p>
+        <p style="color:var(--ccw-gray-700); margin-bottom:24px;">In addition to government audits, the platform maintains ISO 27001 certification for information security management and complies with the Digital Personal Data Protection Act of 2023, ensuring that patient and donor data is handled with the highest standards of privacy and protection.</p>
+        <div class="alert alert-success">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+          <div>The latest audit report confirmed 100% fund traceability and zero instances of fund diversion across all reviewed cases.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <span class="brand-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg></span>
+        <p>CCW - Save Little Lives is a government-backed healthcare crowdfunding platform ensuring transparent funding for pediatric treatment across verified hospitals.</p>
+      </div>
+      <div class="footer-col"><h4>Platform</h4><ul><li><a href="#page-index">Home</a></li><li><a href="#page-about">About Us</a></li><li><a href="#page-how-it-works">How It Works</a></li><li><a href="#page-transparency">Transparency</a></li></ul></div>
+      <div class="footer-col"><h4>Portals</h4><ul><li><a href="#page-index">Hospital Login</a></li><li><a href="#page-index">Donor Login</a></li><li><a href="#page-index">Authority Login</a></li><li><a href="#page-register-case">Register a Case</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#page-contact">Contact Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Security</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2025 CCW - Save Little Lives. All rights reserved.</span><span>Department of Health &amp; Family Welfare</span></div>
+  </footer>
+
+</section>
+<section class="view" id="page-contact" data-title="Contact Us | CCW - Save Little Lives" data-desc="Contact the CCW Save Little Lives team for support with hospital case registration, donor inquiries, or authority coordination on the healthcare crowdfunding platform.">
+<!-- Top Navigation Bar -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="#page-index" class="brand">
+        <span class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">CCW</span><span class="brand-tag">Save Little Lives</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#page-index">Login</a></li>
+        <li><a href="#page-about">About</a></li>
+        <li><a href="#page-how-it-works">How It Works</a></li>
+        <li><a href="#page-transparency">Transparency</a></li>
+        <li><a href="#page-contact" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page hero -->
+  <section class="page-hero mesh-bg">
+    <div class="ph-inner container text-center">
+      <span class="ph-eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        We Are Here to Help
+      </span>
+      <h1>Get in Touch with CCW</h1>
+      <p>Whether you are a hospital with a case to register, a donor with a question, or a health authority seeking coordination, our team is ready to assist you. Reach out through any of the channels below.</p>
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section class="section-pad">
+    <div class="container cols-3-2">
+      <!-- Contact form -->
+      <div class="card card-pad">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Send Us a Message</div>
+            <div class="section-sub">We typically respond within one business day</div>
+          </div>
+        </div>
+        <form class="mt-16" data-demo data-demo-message="Your message has been received. Our support team will respond to your inquiry within one business day.">
+          <div class="grid grid-2">
+            <div class="form-group">
+              <label class="form-label" for="c-name">Full Name <span class="req">*</span></label>
+              <input class="form-control" id="c-name" type="text" placeholder="Enter your full name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-email">Email Address <span class="req">*</span></label>
+              <input class="form-control" id="c-email" type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="grid grid-2">
+            <div class="form-group">
+              <label class="form-label" for="c-phone">Phone Number</label>
+              <input class="form-control" id="c-phone" type="tel" placeholder="+91 98765 43210" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-role">You Are A <span class="req">*</span></label>
+              <select class="form-control" id="c-role" required>
+                <option value="">Select your role</option>
+                <option>Hospital Representative</option>
+                <option>Donor</option>
+                <option>Government Health Official</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-subject">Subject <span class="req">*</span></label>
+            <input class="form-control" id="c-subject" type="text" placeholder="Brief subject of your inquiry" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-message">Message <span class="req">*</span></label>
+            <textarea class="form-control" id="c-message" rows="5" placeholder="Describe your inquiry in detail..." required></textarea>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="c-consent" />
+            <label for="c-consent">I consent to CCW processing my contact information to respond to this inquiry.</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg mt-8">Send Message</button>
+          <div class="form-feedback mt-16"></div>
+        </form>
+      </div>
+
+      <!-- Contact info cards -->
+      <div>
+        <div class="section-head" style="margin-bottom:20px;">
+          <span class="sh-eyebrow">Reach Us Directly</span>
+          <h2>Contact Channels</h2>
+        </div>
+        <div class="grid" style="gap:16px;">
+
+          <div class="card card-pad">
+            <div class="flex gap-12" style="align-items:flex-start;">
+              <span class="qa-icon" style="margin-bottom:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <div>
+                <div class="fw-800" style="font-size:15px; color:var(--ccw-gray-900);">Phone Support</div>
+                <div class="text-gray" style="font-size:13px; margin-top:4px;">Mon to Sat, 9:00 AM to 6:00 PM</div>
+                <div class="fw-700" style="font-size:15px; color:var(--ccw-red); margin-top:8px;">+91 1800 200 4567</div>
+                <div class="text-gray" style="font-size:13px; margin-top:2px;">Toll-free helpline</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-pad">
+            <div class="flex gap-12" style="align-items:flex-start;">
+              <span class="qa-icon" style="margin-bottom:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+              <div>
+                <div class="fw-800" style="font-size:15px; color:var(--ccw-gray-900);">Email Support</div>
+                <div class="text-gray" style="font-size:13px; margin-top:4px;">Responses within one business day</div>
+                <div class="fw-700" style="font-size:15px; color:var(--ccw-red); margin-top:8px;">support@ccw-savelittlelives.gov.in</div>
+                <div class="text-gray" style="font-size:13px; margin-top:2px;">General inquiries</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-pad">
+            <div class="flex gap-12" style="align-items:flex-start;">
+              <span class="qa-icon" style="margin-bottom:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div>
+                <div class="fw-800" style="font-size:15px; color:var(--ccw-gray-900);">Head Office</div>
+                <div class="text-gray" style="font-size:13px; margin-top:4px;">Department of Health &amp; Family Welfare</div>
+                <div class="fw-700" style="font-size:14px; color:var(--ccw-gray-700); margin-top:8px; line-height:1.6;">CCW Cell, 3rd Floor, Health Secretariat Building, Nirman Bhavan, New Delhi - 110011</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="alert alert-info mt-16">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <div>For urgent case-related matters, hospitals should use the in-portal support channel within the Hospital Portal for priority assistance from our verification team.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dedicated support channels -->
+  <section class="section-pad alt-bg">
+    <div class="container">
+      <div class="section-head text-center" style="margin-bottom:36px;">
+        <span class="sh-eyebrow">Role-Specific Support</span>
+        <h2>Dedicated Support Channels</h2>
+        <p>Each stakeholder group has a specialized support pathway to ensure relevant and efficient assistance.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="role-card">
+          <div class="rc-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></div>
+          <h3>Hospital Support</h3>
+          <p>Assistance with case registration, document uploads, portal navigation, and verification status queries. Our hospital liaison team understands clinical workflows and can guide you through every step of the submission process.</p>
+        </div>
+        <div class="role-card">
+          <div class="rc-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></div>
+          <h3>Donor Support</h3>
+          <p>Help with donation processing, tax receipt downloads, case tracking, and impact report access. Our donor care team is available to answer questions about how your contributions are making a difference.</p>
+        </div>
+        <div class="role-card">
+          <div class="rc-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-5h6v5"/></svg></div>
+          <h3>Authority Coordination</h3>
+          <p>Support for case verification workflows, audit requests, compliance reporting, and inter-departmental coordination. Our authority desk facilitates seamless oversight operations across the platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <span class="brand-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg></span>
+        <p>CCW - Save Little Lives is a government-backed healthcare crowdfunding platform ensuring transparent funding for pediatric treatment across verified hospitals.</p>
+      </div>
+      <div class="footer-col"><h4>Platform</h4><ul><li><a href="#page-index">Home</a></li><li><a href="#page-about">About Us</a></li><li><a href="#page-how-it-works">How It Works</a></li><li><a href="#page-transparency">Transparency</a></li></ul></div>
+      <div class="footer-col"><h4>Portals</h4><ul><li><a href="#page-index">Hospital Login</a></li><li><a href="#page-index">Donor Login</a></li><li><a href="#page-index">Authority Login</a></li><li><a href="#page-register-case">Register a Case</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#page-contact">Contact Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Security</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2025 CCW - Save Little Lives. All rights reserved.</span><span>Department of Health &amp; Family Welfare</span></div>
+  </footer>
+
+</section>
+  <script>
+/* ============================================================
+   CCW - Save Little Lives
+   Shared JavaScript
+   ============================================================ */
+
+(function () {
+  "use strict";
+
+  // Password visibility toggle
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".toggle-pw");
+    if (!btn) return;
+    var input = btn.parentElement.querySelector("input");
+    if (!input) return;
+    if (input.type === "password") {
+      input.type = "text";
+      btn.setAttribute("aria-label", "Hide password");
+      btn.innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path><line x1="2" y1="2" x2="22" y2="22"></line></svg>';
+    } else {
+      input.type = "password";
+      btn.setAttribute("aria-label", "Show password");
+      btn.innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+    }
+  });
+
+  // Sidebar toggle for mobile
+  document.addEventListener("click", function (e) {
+    var toggle = e.target.closest(".menu-toggle");
+    if (toggle) {
+      var sb = (document.querySelector(".view.is-active")||document).querySelector(".sidebar");
+      if (sb) sb.classList.toggle("open");
+      return;
+    }
+    // Close sidebar when clicking outside on mobile
+    if (e.target.closest(".sidebar") || e.target.closest(".menu-toggle")) return;
+    var sb = (document.querySelector(".view.is-active")||document).querySelector(".sidebar");
+    if (sb && window.innerWidth <= 860) sb.classList.remove("open");
+  });
+
+  // Multi-step form navigation
+  document.addEventListener("click", function (e) {
+    var next = e.target.closest("[data-step-next]");
+    if (next) {
+      var current = next.closest(".step-panel");
+      if (current) {
+        current.style.display = "none";
+        var target = document.querySelector(next.getAttribute("data-step-next"));
+        if (target) target.style.display = "block";
+        updateStepper(next.getAttribute("data-step-index"));
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      return;
+    }
+    var back = e.target.closest("[data-step-back]");
+    if (back) {
+      var cur = back.closest(".step-panel");
+      if (cur) {
+        cur.style.display = "none";
+        var tgt = document.querySelector(back.getAttribute("data-step-back"));
+        if (tgt) tgt.style.display = "block";
+        updateStepper(back.getAttribute("data-step-index"));
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      return;
+    }
+  });
+
+  function updateStepper(index) {
+    var steps = (document.querySelector(".view.is-active")||document).querySelectorAll(".stepper .step");
+    steps.forEach(function (s, i) {
+      s.classList.remove("active", "done");
+      var idx = parseInt(index, 10);
+      if (i < idx) s.classList.add("done");
+      else if (i === idx) s.classList.add("active");
+    });
+    var lines = (document.querySelector(".view.is-active")||document).querySelectorAll(".stepper .step-line");
+    lines.forEach(function (l, i) {
+      l.classList.toggle("done", i < parseInt(index, 10));
+    });
+  }
+
+  // Form submit demo
+  document.addEventListener("submit", function (e) {
+    var form = e.target.closest("form[data-demo]");
+    if (!form) return;
+    e.preventDefault();
+    var msg = form.getAttribute("data-demo-message") || "Form submitted successfully.";
+    var alertBox = form.querySelector(".form-feedback");
+    if (alertBox) {
+      alertBox.innerHTML =
+        '<div class="alert alert-success">' + msg + "</div>";
+      alertBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+})();
+
+
+
+/* ===== Single-file view router ===== */
+(function () {
+  "use strict";
+  var DEFAULT_KEY = "index";
+
+  function showView(key) {
+    var views = document.querySelectorAll(".view");
+    var found = false;
+    views.forEach(function (v) {
+      if (v.id === "page-" + key) {
+        v.classList.add("is-active");
+        found = true;
+        // Update document title
+        var t = v.getAttribute("data-title");
+        if (t) document.title = t;
+        // Scroll to top on view change
+        window.scrollTo(0, 0);
+      } else {
+        v.classList.remove("is-active");
+      }
+    });
+    if (!found) {
+      // fallback to default
+      var def = document.getElementById("page-" + DEFAULT_KEY);
+      if (def) def.classList.add("is-active");
+    }
+    // Close any open mobile sidebar on navigation
+    var sb = (document.querySelector(".view.is-active")||document).querySelector(".sidebar");
+    if (sb) sb.classList.remove("open");
+  }
+
+  function getKeyFromHash() {
+    var h = window.location.hash || "";
+    // h like "#page-about" or "#about"
+    var m = h.match(/#page-(.+)$/) || h.match(/#(.+)$/);
+    if (m) {
+      var key = m[1];
+      // validate
+      if (document.getElementById("page-" + key)) return key;
+    }
+    return DEFAULT_KEY;
+  }
+
+  function route() {
+    showView(getKeyFromHash());
+  }
+
+  // Initial route
+  function init() {
+    if (!window.location.hash) {
+      history.replaceState(null, "", "#page-" + DEFAULT_KEY);
+    }
+    route();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+
+  window.addEventListener("hashchange", route);
+})();
+
+  </script>
+</body>
+</html>
