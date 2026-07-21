@@ -1,0 +1,297 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register New Case | CCW - Save Little Lives</title>
+  <meta name="description" content="Hospital workflow to register a new patient case for crowdfunding on the CCW Save Little Lives platform." />
+  <link rel="stylesheet" href="assets/styles.css" />
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 2.5h3a1 1 0 0 1 1 1V8h4.5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H14.5v4.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V13H4.5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1H9.5V3.5a1 1 0 0 1 1-1z"/></svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">CCW</span><span class="brand-tag">Save Little Lives</span></span>
+      </div>
+      <ul class="sidebar-nav">
+        <li class="nav-section-title">Hospital Portal</li>
+        <li><a href="authority-dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg> Dashboard</a></li>
+        <li><a href="register-case.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15h6"/></svg> Register New Case</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/><path d="M8 9h2"/></svg> My Cases</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg> Approved Cases</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6"/><path d="M9 9l6 6"/></svg> Rejected Cases</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg> Reports</a></li>
+        <li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Profile</a></li>
+        <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg> Logout</a></li>
+      </ul>
+      <div class="sidebar-user">
+        <div class="sidebar-user-card">
+          <div class="sidebar-user-avatar">GH</div>
+          <div class="sidebar-user-info">
+            <div class="su-name">Govt. General Hospital</div>
+            <div class="su-role">Hospital Administrator</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main-area">
+      <header class="main-header">
+        <div class="flex gap-12" style="align-items:center;">
+          <button class="menu-toggle"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+          <div>
+            <div class="mh-title">Register New Case</div>
+            <div class="mh-subtitle">Govt. General Hospital &middot; 19 May 2025, Monday, 10:30 AM</div>
+          </div>
+        </div>
+        <div class="mh-right">
+          <button class="icon-btn" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="notif-dot"></span></button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div style="max-width:880px; margin:0 auto;">
+
+          <!-- Stepper -->
+          <div class="stepper">
+            <div class="step active"><span class="step-circle">1</span><span class="step-label">Patient Details</span></div>
+            <div class="step-line"></div>
+            <div class="step"><span class="step-circle">2</span><span class="step-label">Treatment Details</span></div>
+            <div class="step-line"></div>
+            <div class="step"><span class="step-circle">3</span><span class="step-label">Review &amp; Submit</span></div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="card card-pad step-panel" id="step1">
+            <div class="flex-between mb-20">
+              <div>
+                <div class="section-title">Patient Details</div>
+                <div class="section-sub">Enter the basic information of the child requiring treatment.</div>
+              </div>
+              <span class="badge badge-pending">Step 1 of 3</span>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label">Patient Name <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter patient name" value="Rahul Kumar" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Age <span class="req">*</span></label>
+                <select class="form-control"><option>4 years</option><option>5 years</option><option>6 years</option></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Gender <span class="req">*</span></label>
+                <select class="form-control"><option>Select gender</option><option>Male</option><option>Female</option><option>Other</option></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Guardian / Parent Name <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter guardian name" value="Suresh Kumar" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Relationship <span class="req">*</span></label>
+                <select class="form-control"><option>Father</option><option>Mother</option><option>Guardian</option></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone Number <span class="req">*</span></label>
+                <input class="form-control" type="tel" placeholder="Enter phone number" value="98765 43210" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Hospital Department <span class="req">*</span></label>
+                <select class="form-control"><option>Cardiology</option><option>Nephrology</option><option>Oncology</option><option>Pediatrics</option></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Treating Doctor <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter doctor name" value="Dr. Meena Sharma" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Upload Medical Reports <span class="req">*</span></label>
+              <div class="upload-area">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
+                <div>Click to upload file</div>
+                <div class="up-hint">Max 1 file &middot; Max size 5MB &middot; PDF, JPG, PNG</div>
+              </div>
+            </div>
+
+            <div class="flex-between mt-16">
+              <a href="authority-dashboard.html" class="btn btn-ghost">Cancel</a>
+              <button class="btn btn-primary" data-step-next="#step2" data-step-index="1">Next Step
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="card card-pad step-panel" id="step2" style="display:none;">
+            <div class="flex-between mb-20">
+              <div>
+                <div class="section-title">Treatment Details</div>
+                <div class="section-sub">Provide the treatment plan and estimated cost breakdown.</div>
+              </div>
+              <span class="badge badge-pending">Step 2 of 3</span>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="form-group">
+                <label class="form-label">Hospital Department <span class="req">*</span></label>
+                <select class="form-control"><option>Cardiology</option><option>Nephrology</option><option>Oncology</option></select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Treatment Type <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter treatment type" value="Heart Surgery" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Estimated Cost (INR) <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter estimated cost" value="2,50,000" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Treatment Duration (Days) <span class="req">*</span></label>
+                <input class="form-control" type="text" placeholder="Enter duration in days" value="45" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Treatment Description <span class="req">*</span></label>
+              <textarea class="form-control" placeholder="Describe the treatment plan">Surgical correction of congenital heart defect requiring immediate intervention.</textarea>
+            </div>
+
+            <div class="info-box mb-16">
+              <strong>Important:</strong> Estimated cost should include surgery, medication, hospital stay and post-operative care. Exclude travel and personal expenses.
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Source of Funds Required <span class="req">*</span></label>
+              <select class="form-control"><option>Crowdfunding</option><option>Government Scheme</option><option>Partial Insurance + Crowdfunding</option></select>
+            </div>
+
+            <div class="card card-pad mb-16" style="background:var(--ccw-gray-50);">
+              <div class="section-title" style="font-size:15px;">Bank Details (for Fund Transfer)</div>
+              <div class="grid grid-2 mt-16">
+                <div class="form-group">
+                  <label class="form-label">Account Holder Name</label>
+                  <input class="form-control" type="text" value="Rahul Kumar" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Account Number</label>
+                  <input class="form-control" type="text" value="1234567890" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">IFSC Code</label>
+                  <input class="form-control" type="text" value="SBIN0001234" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">UPI ID</label>
+                  <input class="form-control" type="text" value="example@upi.id" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Required Documents / Qualifications</label>
+              <div class="flex wrap gap-12">
+                <label class="checkbox-row"><input type="checkbox" checked /> Medical Reports</label>
+                <label class="checkbox-row"><input type="checkbox" checked /> Income Certificate</label>
+                <label class="checkbox-row"><input type="checkbox" checked /> Hospital Estimate</label>
+                <label class="checkbox-row"><input type="checkbox" /> Aadhaar Card</label>
+                <label class="checkbox-row"><input type="checkbox" checked /> Doctor's Prescription</label>
+              </div>
+            </div>
+
+            <div class="flex-between mt-16">
+              <button class="btn btn-ghost" data-step-back="#step1" data-step-index="0">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                Back
+              </button>
+              <button class="btn btn-primary" data-step-next="#step3" data-step-index="2">Next Step
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="card card-pad step-panel" id="step3" style="display:none;">
+            <div class="flex-between mb-20">
+              <div>
+                <div class="section-title">Review &amp; Submit</div>
+                <div class="section-sub">Please review all details before submitting the case.</div>
+              </div>
+              <span class="badge badge-pending">Step 3 of 3</span>
+            </div>
+
+            <!-- Patient details review -->
+            <div class="card card-pad mb-16">
+              <div class="flex-between mb-16">
+                <div class="section-title" style="font-size:15px;">Patient Details</div>
+                <button class="btn btn-ghost btn-sm" data-step-back="#step1" data-step-index="0">Edit</button>
+              </div>
+              <div class="grid grid-2">
+                <div><span class="muted">Patient Name:</span> <strong>Rahul Kumar</strong></div>
+                <div><span class="muted">Age:</span> <strong>4 years</strong></div>
+                <div><span class="muted">Gender:</span> <strong>Male</strong></div>
+                <div><span class="muted">Guardian:</span> <strong>Suresh Kumar (Father)</strong></div>
+                <div><span class="muted">Phone:</span> <strong>98765 43210</strong></div>
+                <div><span class="muted">Department:</span> <strong>Cardiology</strong></div>
+                <div><span class="muted">Treating Doctor:</span> <strong>Dr. Meena Sharma</strong></div>
+              </div>
+            </div>
+
+            <!-- Treatment details review -->
+            <div class="card card-pad mb-16">
+              <div class="flex-between mb-16">
+                <div class="section-title" style="font-size:15px;">Treatment Details</div>
+                <button class="btn btn-ghost btn-sm" data-step-back="#step2" data-step-index="1">Edit</button>
+              </div>
+              <div class="grid grid-2">
+                <div><span class="muted">Treatment Type:</span> <strong>Heart Surgery</strong></div>
+                <div><span class="muted">Estimated Cost:</span> <strong class="text-red">Rs. 2,50,000</strong></div>
+                <div><span class="muted">Treatment Duration:</span> <strong>45 Days</strong></div>
+                <div><span class="muted">Source of Funds:</span> <strong>Crowdfunding</strong></div>
+              </div>
+              <div class="divider"></div>
+              <div class="section-title" style="font-size:14px; margin-bottom:10px;">Bank Details</div>
+              <div class="grid grid-2">
+                <div><span class="muted">Account Holder:</span> <strong>Rahul Kumar</strong></div>
+                <div><span class="muted">Account Number:</span> <strong>1234567890</strong></div>
+                <div><span class="muted">IFSC Code:</span> <strong>SBIN0001234</strong></div>
+                <div><span class="muted">UPI ID:</span> <strong>example@upi.id</strong></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-row"><input type="checkbox" /> I declare that the information provided is true and accurate to the best of my knowledge. I understand that false information may lead to rejection of the case and legal action as per government regulations.</label>
+            </div>
+
+            <div class="form-feedback"></div>
+
+            <div class="flex-between mt-16">
+              <button class="btn btn-ghost" data-step-back="#step2" data-step-index="1">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                Back
+              </button>
+              <form data-demo data-demo-message="Case submitted successfully. It is now awaiting approval from the Government Health Authority." style="display:contents;">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Case</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
