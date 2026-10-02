@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#050506" />
+<title>LifeLink — Connecting Donors, Hospitals & Health Authorities</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="app.css" />
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="mode-landing">
+
+<!-- ===== BACKGROUND LAYERS ===== -->
+<canvas id="particles" class="bg-layer"></canvas>
+<canvas id="ecg" class="bg-layer"></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-rays" aria-hidden="true"></div>
+<div class="bg-vignette" aria-hidden="true"></div>
+
+<!-- ===== SIGNATURE TRANSITION RING ===== -->
+<div class="portal" aria-hidden="true">
+  <div class="portal-ring"></div>
+  <div class="portal-ring portal-ring--2"></div>
+  <div class="portal-core"></div>
+  <div class="portal-particles"></div>
+</div>
+
+<!-- ===== TOP HUD ===== -->
+<header class="hud">
+  <div class="hud-brand">
+    <span class="hud-cross"><span></span><span></span></span>
+    <span class="hud-name">LIFE<em>LINK</em></span>
+  </div>
+  <nav class="hud-nav">
+    <button class="hud-dot active" data-go="0" aria-label="Home"></button>
+    <button class="hud-dot" data-go="1" aria-label="Donor"></button>
+    <button class="hud-dot" data-go="2" aria-label="Hospital"></button>
+    <button class="hud-dot" data-go="3" aria-label="Authority"></button>
+  </nav>
+  <div class="hud-status">
+    <span class="hud-pulse"></span>
+    <span>SYSTEM LIVE</span>
+  </div>
+</header>
+
+<!-- ===== SCROLL SPACER (drives the 3D rotation) ===== -->
+<div class="scroll-spacer"></div>
+
+<!-- ===== 3D SCENE ===== -->
+<main class="scene" id="scene">
+  <div class="carousel" id="carousel">
+
+    <!-- ============ STAGE 0 — LANDING ============ -->
+    <section class="panel" data-stage="0">
+      <div class="panel-inner hero">
+        <div class="hero-aura"></div>
+        <div class="hero-silhouette" aria-hidden="true">
+          <svg viewBox="0 0 200 320" fill="none">
+            <defs>
+              <linearGradient id="silG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff2b3d" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#ff2b3d" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="52" r="34" fill="url(#silG)"/>
+            <path d="M100 92c-30 0-52 22-56 54l-8 96h32l6-70 10 170h32l10-170 6 70h32l-8-96c-4-32-26-54-56-54z" fill="url(#silG)"/>
+          </svg>
+        </div>
+        <div class="hero-cross" aria-hidden="true">
+          <span class="hero-cross-v"></span><span class="hero-cross-h"></span>
+        </div>
+
+        <p class="hero-eyebrow">A CINEMATIC JOURNEY OF HOPE</p>
+
+        <h1 class="hero-quote hero-quote--headline">
+          <span class="line line-accent">One small contribution can become someone’s second chance.</span>
+        </h1>
+
+        <div class="hero-ecg" aria-hidden="true">
+          <svg viewBox="0 0 900 120" preserveAspectRatio="none">
+            <path class="ecg-path" d="M0 60 H260 l18 -34 l20 68 l18 -34 H470 l16 -46 l22 92 l18 -46 H900" />
+          </svg>
+        </div>
+
+
+
+        <div class="hero-scroll-hint">
+          <span class="mouse"><span class="wheel"></span></span>
+          <span>Scroll to begin the journey</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STAGE 1 — DONOR LOGIN ============ -->
+    <section class="panel" data-stage="1">
+      <div class="panel-inner donor">
+        <header class="sec-head">
+          <p class="sec-kicker">STAGE 01 / THE GIVER</p>
+          <h2 class="sec-title">DONOR</h2>
+          <p class="sec-sub">"Your support can become someone's hope."</p>
+        </header>
+
+        <div class="donor-stage">
+          <div class="donor-ring" aria-hidden="true">
+            <span class="ring-rot ring-rot--a"></span>
+            <span class="ring-rot ring-rot--b"></span>
+            <span class="ring-rot ring-rot--c"></span>
+          </div>
+
+          <div class="glass-card donor-card">
+            <div class="card-tabs">
+              <button class="tab active" data-tab="login">Login</button>
+              <button class="tab" data-tab="register">Create Account</button>
+            </div>
+
+            <form class="auth-form" data-form="login" data-role="donor" onsubmit="return false;">
+              <label class="field">
+                <span class="field-label">Email</span>
+                <input type="email" name="email" placeholder="Enter your registered email" autocomplete="off" />
+                <span class="field-glow"></span>
+              </label>
+              <label class="field">
+                <span class="field-label">Password</span>
+                <input type="password" name="password" placeholder="••••••••" autocomplete="off" />
+                <span class="field-glow"></span>
+              </label>
+              <div class="form-row">
+                <label class="check"><input type="checkbox" name="remember" /><span></span>Remember Me</label>
+                <a class="link" href="#" data-forgot="donor">Forgot Password?</a>
+              </div>
+              <button class="btn btn-primary" type="submit">
+                <span class="btn-label">Login</span><span class="btn-sheen"></span>
+              </button>
+            </form>
+
+            <form class="auth-form hidden" data-form="register" data-role="donor" onsubmit="return false;">
+              <label class="field">
+                <span class="field-label">Full Name</span>
+                <input type="text" placeholder="Your name" autocomplete="off" />
+                <span class="field-glow"></span>
+              </label>
+              <label class="field">
+                <span class="field-label">Email</span>
+                <input type="email" placeholder="you@example.com" autocomplete="off" />
+                <span class="field-glow"></span>
+              </label>
+              <label class="field">
+                <span class="field-label">Password</span>
+                <input type="password" placeholder="Create a password" autocomplete="off" />
+                <span class="field-glow"></span>
+              </label>
+              <button class="btn btn-primary" type="submit">
+                <span class="btn-label">Create Account</span><span class="btn-sheen"></span>
+              </button>
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STAGE 2 — HOSPITAL LOGIN ============ -->
+    <section class="panel" data-stage="2">
+      <div class="panel-inner hospital">
+        <header class="sec-head">
+          <p class="sec-kicker">STAGE 02 / THE HEALER</p>
+          <h2 class="sec-title">HOSPITAL</h2>
+          <p class="sec-sub">"Verify. Connect. Save."</p>
+        </header>
+
+        <div class="glass-card hospital-login-card">
+          <form class="auth-form" data-form="login" data-role="hospital" onsubmit="return false;">
+            <label class="field">
+              <span class="field-label">Hospital ID / Email</span>
+              <input type="text" name="email" placeholder="Enter Hospital ID or registered email" autocomplete="off" />
+              <span class="field-glow"></span>
+            </label>
+            <label class="field">
+              <span class="field-label">Password</span>
+              <input type="password" name="password" placeholder="••••••••" autocomplete="off" />
+              <span class="field-glow"></span>
+            </label>
+            <div class="form-row">
+              <span></span>
+              <a class="link" href="#" data-forgot="hospital">Forgot Password?</a>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              <span class="btn-label">Login</span><span class="btn-sheen"></span>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STAGE 3 — AUTHORITY LOGIN ============ -->
+    <section class="panel" data-stage="3">
+      <div class="panel-inner authority">
+        <header class="sec-head">
+          <p class="sec-kicker">STAGE 03 / THE GUARDIAN</p>
+          <h2 class="sec-title">HEALTH AUTHORITY</h2>
+          <p class="sec-sub">"Verify cases. Protect trust. Enable support."</p>
+        </header>
+
+        <div class="authority-stage">
+          <div class="sec-grid" aria-hidden="true"></div>
+          <div class="sec-scan" aria-hidden="true"></div>
+
+          <div class="glass-card authority-card">
+            <div class="shield" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 3 42 10v13c0 11-7.5 18.5-18 22C13.5 41.5 6 34 6 23V10L24 3z" stroke="url(#sg)" stroke-width="2"/>
+                <path d="M24 16v10M19 21h10" stroke="url(#sg)" stroke-width="2.4" stroke-linecap="round"/>
+                <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#ff2b3d"/><stop offset="100%" stop-color="#ff6b78"/>
+                </linearGradient></defs>
+              </svg>
+            </div>
+            <h3 class="authority-title">Authority Login</h3>
+
+            <form class="auth-form" data-form="login" data-role="authority" onsubmit="return false;">
+              <label class="field">
+                <span class="field-label">Authority ID / Email</span>
+                <input type="text" name="email" placeholder="Enter Authority ID or registered email" autocomplete="off" />
+                <span class="field-glow"></span>
+              </label>
+              <label class="field">
+                <span class="field-label">Password</span>
+                <input type="password" name="password" placeholder="••••••••" autocomplete="off" />
+                <span class="field-glow"></span>
+              </label>
+              <div class="secure-line"><span class="lock"></span><span>256-bit secure verification channel</span></div>
+              <button class="btn btn-primary" type="submit">
+                <span class="btn-label">Login</span><span class="btn-sheen"></span>
+              </button>
+            </form>
+
+          </div>
+        </div>
+
+        <div class="trust-strip">
+          <span>Verification</span><i></i><span>Audit Trail</span><i></i><span>Trust</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ===== SCROLL PROGRESS RAIL ===== -->
+<div class="rail" aria-hidden="true"><span class="rail-fill" id="railFill"></span></div>
+
+<!-- ===== APPLICATION ROOT (dashboards) ===== -->
+<div id="app" class="app-root" aria-hidden="true"></div>
+
+<!-- ===== TOASTS ===== -->
+<div id="toasts" class="toast-wrap" aria-live="polite"></div>
+
+<script src="script.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
